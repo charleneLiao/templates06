@@ -1,0 +1,17 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"  // ✅ 以 `/` 開頭，不要以 `/` 結尾
+    }
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "/node_modules/**",
+    "/.vscode/**"
+  ],
+  "liveSassCompile.settings.includeItems": [
+    "/scss/style.scss"  // ✅ 加上開頭斜線，並正確指到 .scss 檔
+  ],
+  "liveSassCompile.settings.generateMap": false
+}

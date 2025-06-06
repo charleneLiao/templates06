@@ -1,0 +1,77 @@
+.bannerComponent {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+
+  .hero-bg {
+    position: absolute;
+    top: 50%;
+    max-width: none;
+    width: 59.375%;
+  }
+
+  .text-center {
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 33%;
+    left: 27.08333%;
+    z-index: 10;
+    width: 387px;
+    font-family: system-ui;
+  }
+
+  .text-muted {
+    font-size: 100%;
+    font-family: Georgia, serif;
+    letter-spacing: 0.06em;
+    line-height: 1.86;
+    position: absolute;
+    z-index: 2;
+    bottom: 36%;
+    left: -9%;
+    text-align: left;
+    color: rgb(210, 212, 213);
+    margin-left: 30em;
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      display: none;
+    }
+  }
+
+  // 🎯 垂直輪播設定（由上往下）
+  .vertical-scroll-wrapper {
+    height: 100vh; // 可視範圍高度
+    overflow: hidden;
+    position: relative;
+  }
+
+  .vertical-scroll-inner {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-down 30s linear infinite;
+  }
+
+  .vertical-scroll-inner img {
+    height: 220px;
+    object-fit: cover;
+    width: 360px;
+    flex-shrink: 0;
+  }
+
+  // 🎯 關鍵動畫（從 0 移到負值 → 圖片從上往下滾出）
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-880px); // 220px * 4 張（含重複首圖）
+    }
+  }
+}

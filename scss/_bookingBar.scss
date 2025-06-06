@@ -1,0 +1,23 @@
+.bookingBarComponent {
+    input[type="date"] {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        border: none;
+        background-color: transparent;
+    }
+
+    .btn-link {
+        font-size: 1.5rem;
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            color: #555;
+        }
+    }
+
+    .btn-dark {
+        border-radius: 0;
+    }
+}

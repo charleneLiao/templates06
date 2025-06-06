@@ -1,0 +1,71 @@
+{
+  "menuName": "頭部選單",
+  "items": [
+    {
+      "title": "房型介紹",
+      "href": "rooms.html",
+      "children": []
+    },
+    {
+      "title": "最新消息",
+      "href": "news.html",
+      "children": [
+        {
+          "title": "住宿優惠",
+          "href": "news.html"
+        },
+        {
+          "title": "餐飲優惠",
+          "href": "news.html"
+        },
+        {
+          "title": "活動訊息",
+          "href": "news.html"
+        },
+        {
+          "title": "藝文活動",
+          "href": "news.html"
+        }
+      ]
+    },
+    {
+      "title": "飯店介紹",
+      "href": "about.html",
+      "children": []
+    },
+    {
+      "title": "設施介紹",
+      "href": "facility.html",
+      "children": []
+    },
+    {
+      "title": "交通位置",
+      "href": "traffic.html",
+      "target": "_blank",
+      "children": []
+    },
+    {
+      "title": "聯絡我們",
+      "href": "javascript: void(0)",
+      "modalTarget": "#myModal",
+      "children": []
+    },
+    {
+      "title": "線上訂房",
+      "href": "step1.html",
+      "children": []
+    },
+    {
+      "title": "加入會員",
+      "href": "javascript: void(0)",
+      "modalTarget": "#join_member",
+      "children": []
+    },
+    {
+      "title": "語言選擇",
+      "href": "javascript: void(0)",
+      "component": "google_translate_element",
+      "children": []
+    }
+  ]
+}

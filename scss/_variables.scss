@@ -1,0 +1,41 @@
+// ⬇️ 主色系
+$primary: rgb(186, 202, 131);
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// ⬇️ 文字顏色
+$text-color: #111111; // 正文
+$text-title-color: #111111;
+$text-subtle-color: #777777;
+
+// ⬇️ 背景顏色
+$body-bg: #ffffff;
+
+// ⬇️ 圓角
+$border-radius: 0.5rem;
+
+// ⬇️ 字體設定
+$font-family-base: 'Noto Sans TC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size-base: 1rem; // 16px
+$line-height-base: 1.5;
+
+// ⬇️ 按鈕樣式
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.25rem;
+$btn-border-radius: 2rem;
+
+// ⬇️ 頁面容器最大寬度
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
+// 如果有引入 Bootstrap 原始檔，可在這邊引入覆蓋：
+// @import "node_modules/bootstrap/scss/bootstrap";

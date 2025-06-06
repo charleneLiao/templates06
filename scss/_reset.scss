@@ -1,0 +1,33 @@
+@use 'variables';
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.05rem;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+/* 3. 標題與段落 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TESTO HOTEL</title>
+  <script src="js/include.js" defer></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="fonts/fontawesome/all.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <!-- Bootstrap theme（可選） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+
+</head>
+
+<body>
+  <div id="headerComponent"></div>
+  <div id="bannerComponent"></div> <!-- 大廣告 -->
+  <div id="bookingBarComponent"></div> <!-- 日期訂房器 -->
+  <div id="specialOffersComponent"></div> <!--優惠活動 -->
+  <div id="popularRoomsComponent"></div> <!--熱門房型 -->
+  <div id="diningFacilitiesComponent"></div> <!--餐飲設施 -->
+  <div id="footerComponent"></div>
+
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2 id="roomTitle"></h2>
+          <p id="roomDesc"></p>
+        </div>
+        <div class="col-6">右邊</div>
+      </div>
+    </div>
+  </main>
+  <script src="js/vue.global.prod.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/data/roomIntro.js"></script>
+  <script src="js/main.js" defer></script>
+  <!-- <script src="app.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const room = window.roomIntro[0];
+      document.getElementById("roomTitle").textContent = room.title;
+      document.getElementById("roomDesc").textContent = room.description;
+    });
+
+    flatpickr("#checkIn", {
+      dateFormat: "Y/m/d",
+      minDate: "today"
+    });
+
+    flatpickr("#checkOut", {
+      dateFormat: "Y/m/d",
+      minDate: "today"
+    });
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+.gn-header {
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+.gn-header .logo img {
+  height: 40px;
+}
+.gn-header .text-logo {
+  line-height: 1;
+  font-size: 0.9rem;
+  color: #000;
+}
+.gn-header .language-selector {
+  font-size: 0.9rem;
+  color: #333;
+}
+.gn-header .action-buttons .btn {
+  color: #fff;
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  border-radius: 0;
+  white-space: nowrap;
+}
+.gn-header .action-buttons .btn.btn-room {
+  background-color: #000;
+}
+.gn-header .action-buttons .btn.btn-restaurant {
+  background-color: #6f4e37;
+}
+.gn-header .menu-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.gn-header .menu-icon .icon-lines {
+  width: 25px;
+}
+.gn-header .menu-icon .icon-lines div {
+  height: 2px;
+  background-color: #000;
+  margin: 5px 0;
+}
+
+.side-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background-color: #f5f1eb;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+.side-menu.show {
+  left: 0;
+}
+.side-menu .menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+.side-menu ul li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.side-menu ul li .submenu {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+  display: none;
+}
+.side-menu ul li.has-submenu.open .submenu {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
