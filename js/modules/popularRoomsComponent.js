@@ -20,7 +20,7 @@ window.loadPopularRooms = function () {
         <a href="#" class="btn btn-outline-dark rounded-0 px-4">更多 →</a>
       </div>
       <div class="col-md-6 p-0">
-        <img src="images/room/room01.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="貴賓樓層">
+        <img src="images/room/room04.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="貴賓樓層">
       </div>
     </div>
 
@@ -28,7 +28,7 @@ window.loadPopularRooms = function () {
     <div class="row row-cols-1 row-cols-md-2 g-4">
       <div class="col">
         <div class="position-relative bg-white shadow-sm rounded overflow-hidden h-100">
-          <img src="images/room/room02.jpg" class="img-fluid w-100 object-fit-cover" alt="高級樓層">
+          <img src="images/room/room04.jpg" class="img-fluid w-100 object-fit-cover" alt="高級樓層">
           <div class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1">20-24F</div>
           <div class="p-4">
             <h4 class="fw-bold">高級樓層</h4>
@@ -39,7 +39,7 @@ window.loadPopularRooms = function () {
 
       <div class="col">
         <div class="position-relative bg-white shadow-sm rounded overflow-hidden h-100">
-          <img src="images/room/room03.jpg" class="img-fluid w-100 object-fit-cover" alt="一般樓層">
+          <img src="images/room/room05.jpg" class="img-fluid w-100 object-fit-cover" alt="一般樓層">
           <div class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1">9-19F</div>
           <div class="p-4">
             <h4 class="fw-bold">一般樓層</h4>
