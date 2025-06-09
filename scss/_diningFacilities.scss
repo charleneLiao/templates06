@@ -1,0 +1,43 @@
+.diningFacilitiesComponent {
+    .container-fluid {
+        .marquee-wrapper {
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background-color: #f8f9fa; // 可選
+
+            .marquee {
+                display: flex;
+                width: max-content; // 重要：寬度根據內容自動延展
+                animation: scroll-left 60s linear infinite;
+
+                li {
+                    flex: 0 0 auto;
+
+                    img {
+                        width: 330px;
+                        height: auto;
+                        object-fit: cover;
+                        max-width: unset; // 移除 img-fluid 限制
+                        display: block;
+                    }
+                }
+            }
+
+            @keyframes scroll-left {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}

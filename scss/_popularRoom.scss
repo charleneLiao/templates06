@@ -1,0 +1,54 @@
+.popularRoomsComponent {
+  .row-cols-md-2>.col {
+    // flex: 0 0 calc(50% - 12px); // 每個欄位扣掉 gap 一半
+    // max-width: calc(50% - 12px);
+  }
+
+  h2 {
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: 0.05em;
+  }
+
+  .object-fit-cover {
+    object-fit: cover;
+    // height: 100%;
+  }
+
+  .badge {
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 0;
+  }
+
+  .btn-outline-dark {
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+
+  .position-relative {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  .p-4 {
+    text-align: left;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #888;
+    }
+  }
+}

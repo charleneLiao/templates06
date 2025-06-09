@@ -5,9 +5,52 @@ window.loadPopularRooms = function () {
   if (!target) return;
 
   target.innerHTML = `
-    <section class="popularRoomsComponent">
-      <h2>loadPopularRooms 區塊</h2>
-      <p>這是 popularRoomsComponent 的預設內容，可替換。</p>
-    </section>
+    <section class="popularRoomsComponent py-5 bg-light text-center">
+  <div class="container">
+
+    <h2 class="mb-5 fw-bold fs-2">房型</h2>
+
+    <!-- 貴賓樓層 -->
+    <div class="row align-items-center bg-white shadow-sm rounded overflow-hidden mb-5">
+      <div class="col-md-6 text-start p-5">
+        <span class="badge bg-warning text-dark mb-3 fs-6">25-28F</span>
+        <h3 class="fw-bold fs-3">貴賓樓層</h3>
+        <div class="text-uppercase text-muted mb-3">AUTHENTIC STYLE / BREEZE STYLE</div>
+        <p class="text-muted mb-4">除了私人休息室，我們還提供專屬的服務。</p>
+        <a href="#" class="btn btn-outline-dark rounded-0 px-4">更多 →</a>
+      </div>
+      <div class="col-md-6 p-0">
+        <img src="images/room/room01.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="貴賓樓層">
+      </div>
+    </div>
+
+    <!-- 高級樓層與一般樓層 -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="position-relative bg-white shadow-sm rounded overflow-hidden h-100">
+          <img src="images/room/room02.jpg" class="img-fluid w-100 object-fit-cover" alt="高級樓層">
+          <div class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1">20-24F</div>
+          <div class="p-4">
+            <h4 class="fw-bold">高級樓層</h4>
+            <a href="#" class="text-decoration-none text-dark">→</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="position-relative bg-white shadow-sm rounded overflow-hidden h-100">
+          <img src="images/room/room03.jpg" class="img-fluid w-100 object-fit-cover" alt="一般樓層">
+          <div class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1">9-19F</div>
+          <div class="p-4">
+            <h4 class="fw-bold">一般樓層</h4>
+            <a href="#" class="text-decoration-none text-dark">→</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   `;
 };

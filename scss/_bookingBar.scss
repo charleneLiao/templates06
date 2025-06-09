@@ -1,23 +1,60 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+
 .bookingBarComponent {
-    input[type="date"] {
-        font-size: 1.25rem;
-        font-weight: bold;
-        text-align: center;
-        border: none;
-        background-color: transparent;
-    }
+  background-color: red;
 
-    .btn-link {
-        font-size: 1.5rem;
-        color: #000;
-        text-decoration: none;
+  // 移除固定高度，改為 padding 控制高度與內距
+  padding: 1rem 0;
 
-        &:hover {
-            color: #555;
-        }
-    }
+  input[type="date"] {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+  }
 
-    .btn-dark {
-        border-radius: 0;
+  .hd {
+    background-color: #000;
+    padding: 0.5em;
+    color: $white;
+  }
+  .btn-link {
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      color: #555;
     }
+  }
+
+  .btn-dark {
+    border-radius: 0;
+  }
+
+  .row {
+    gap: 0;
+  }
+
+  // 每個欄位垂直置中
+  .row>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-width: 0;
+  }
+
+  // 修正 + - 按鈕尺寸與一致性
+  .btn.rounded-circle {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 1;
+    text-align: center;
+  }
 }

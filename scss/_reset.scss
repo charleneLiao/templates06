@@ -31,3 +31,21 @@ p {
 a {
   text-decoration: none;
 }
+.no-gutter {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+  gap: 0 !important;
+}
+
+.custom-cols > .col {
+  flex: 0 0 calc(25% - 24px);
+  max-width: calc(25% - 24px);
+}
+.row-cols-md-2.g-4 > .col {
+  flex: 0 0 calc(50% - 12px);   // 或保守點 - 16px ~ 24px
+  max-width: calc(50% - 12px);
+}
+
+

@@ -1,12 +1,17 @@
 // ⬇️ 主色系
-$primary: rgb(186, 202, 131);
+$primary: #a38300;
 $secondary: #6c757d;
+$secondary01: #142247;
+$secondary02: #2a1818ed;
+$secondary03: #144747;
 $success: #28a745;
 $danger: #dc3545;
 $warning: #ffc107;
 $info: #17a2b8;
 $light: #f8f9fa;
 $dark: #343a40;
+$white: #ffffff;
+$black: #000000;
 
 // ⬇️ 文字顏色
 $text-color: #111111; // 正文
@@ -21,7 +26,7 @@ $border-radius: 0.5rem;
 
 // ⬇️ 字體設定
 $font-family-base: 'Noto Sans TC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-size-base: 1rem; // 16px
+$font: 1rem; // 16px
 $line-height-base: 1.5;
 
 // ⬇️ 按鈕樣式

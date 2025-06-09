@@ -1,0 +1,96 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+
+.specialOffersComponent {
+    .container {
+        .promo-slider .card {
+            margin: 0 10px;
+
+            .card-img-top {
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+
+        .promo-slider {
+            position: relative;
+            padding: 0 2rem; // 給左右箭頭預留空間
+
+            // ⬅️ 左右箭頭樣式
+            .slick-prev,
+            .slick-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                font-size: 0;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    margin: auto;
+                    border: solid transparent;
+                    border-width: 6px;
+                }
+            }
+
+            .slick-prev {
+                left: 0;
+
+                &::before {
+                    border-right-color: #333;
+                    border-left: none;
+                }
+            }
+
+            .slick-next {
+                right: 0;
+
+                &::before {
+                    border-left-color: #333;
+                    border-right: none;
+                }
+            }
+
+            // ⭕ slick-dots 底部 1234 分頁圓點
+            .slick-dots {
+                display: flex !important;
+                justify-content: center;
+                gap: 0.5rem;
+                padding-top: 1.5rem;
+                list-style: none;
+
+                li {
+                    width: 12px;
+                    height: 12px;
+
+                    button {
+                        width: 12px;
+                        height: 12px;
+                        padding: 0;
+                        border: none;
+                        border-radius: 50%;
+                        background-color: #ccc;
+                        text-indent: -9999px; // 隱藏文字
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                    }
+
+                    &.slick-active button {
+                        background-color: #0d6efd;
+                    }
+                }
+            }
+        }
+
+    }
+}

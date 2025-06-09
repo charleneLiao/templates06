@@ -76,10 +76,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-
-  @include respond-max(lg) {
-    flex-direction: column;
-  }
 }
 
 .container-in {
@@ -194,4 +190,21 @@
 .wide-modal-s {
   max-width: 1000px;
   width: 90%;
+}
+
+.container .row {
+  flex: 0 0 calc(50% - 12px);
+  gap: 0;
+}
+
+@include respond-max(md) {
+  .row.row-cols-md-2.g-4>.col {
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+
+  .container .row {
+    flex: 0 0 calc(50% - 12px);
+    gap: 0;
+  }
 }

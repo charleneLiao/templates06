@@ -2,15 +2,25 @@
 @use './breakpoints' as *;
 @use './mixins' as *;
 
+#headerComponent {
+  .gn-header {
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .gn-header.sticky {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .gn-header {
   background-color: #fff;
   position: relative;
   z-index: 1000;
+  padding: 1em;
 
-  .logo img {
-    height: 80px;
-    padding: 11px 0;
-  }
+  .logo img {}
 
   .text-logo {
     line-height: 1;
@@ -28,12 +38,6 @@
     gap: 0.5rem;
 
     .btn {
-      color: #fff;
-      padding: 0.5em 1.5em;
-      font-size: 1rem;
-      border-radius: 0;
-      white-space: nowrap;
-
       &.btn-room {
         background-color: #000;
       }
@@ -83,12 +87,6 @@
     flex-wrap: wrap;
     gap: 1rem;
 
-    @include respond-max(lg) {
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-
     @include respond-max(md) {
       flex-direction: row;
       gap: 2rem;
@@ -97,9 +95,6 @@
 
   .action-buttons {
     @include respond-max(lg) {
-      flex-direction: column;
-      align-items: stretch;
-
       .btn {
         width: 100%;
         font-size: 1rem;
@@ -260,25 +255,10 @@
   }
 }
 
-// ✅ 手機版：固定在畫面頂部的語系 + 操作按鈕列
 .mobile-header-action-bar {
   display: none;
 
   @include respond-max(md) {
-    // display: flex;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // z-index: 1100;
-    // background-color: #fff;
-    // border-bottom: 1px solid #ddd;
-    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    // padding: 0.5em 0.5em;
-    // justify-content: space-around;
-    // align-items: center;
-    // gap: 0.25em;
-
     a.btn {
       flex: 1;
       font-size: 14px;
@@ -289,22 +269,13 @@
 
     .btn-room {
       background-color: #000;
-      color: #fff;
     }
 
     .btn-restaurant {
       background-color: #6f4e37;
-      color: #fff;
     }
-
-    .btn-primary {
-      background-color: #007bff;
-      color: #fff;
-    }
-
     .btn-traffic {
       background-color: #e0e0e0;
-      color: #000;
     }
   }
 
@@ -313,10 +284,9 @@
   }
 }
 
-// ✅ 手機版隱藏 header 的 action-buttons
 @include respond-max(md) {
   .gn-header {
-    padding-top: 60px; // 預留 mobile header 空間
+    padding-top: 60px;
   }
 
   .gn-header .action-buttons {
@@ -337,10 +307,6 @@
     align-items: center !important;
     gap: 0.5em !important;
 
-    img {
-      height: 40px !important;
-    }
-
     .text-logo {
       display: flex !important;
       flex-direction: column !important;
@@ -357,4 +323,26 @@
       }
     }
   }
+}
+
+#headerSticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#headerSticky.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#headerMain {
+  transition: opacity 0.4s ease;
 }

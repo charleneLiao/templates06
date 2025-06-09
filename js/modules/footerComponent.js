@@ -1,9 +1,10 @@
+
 window.loadFooter = function () {
   const target = document.getElementById("footerComponent");
   if (!target) return;
 
   const data = {
-    logo: "images/logo.png",
+    logo: "images/TESTOLOGO.svg",
     hotelName: "高雄特思得行旅",
     address: "高雄市新光路38號24F-6",
     phone: "+886-7-968-2715",
@@ -37,46 +38,59 @@ window.loadFooter = function () {
   };
 
   let html = `
-    <footer class="footerComponent">
-      <div class="fpc">
-        <div class="wrp-1 logo">
-          <img src="${data.logo}" alt="logo">
+   <footer class="footerComponent bg-light pt-4 border-top">
+  <div class="container">
+
+    <div class="row align-items-center mb-4">
+      <div class="col-md-2 text-md-start text-center mb-3 mb-md-0">
+        <img src="${data.logo}" alt="logo" class="img-fluid">
+      </div>
+
+      <div class="col-md-10 text-md-start text-center">
+        <ul class="list-unstyled mb-2 small">
+          <li class="fw-bold fs-6">${data.hotelName}</li>
+          <li>${data.address}</li>
+          <li>訂房專線：${data.phone}</li>
+          <li>傳真號碼：${data.fax}</li>
+        </ul>
+        <div class="d-flex justify-content-md-start justify-content-center gap-3">
+          ${data.social.map(item => `
+          <a target="_blank" href="${item.href}" class="text-dark fs-5" aria-label="${item.name}">
+            <i class="fa ${item.icon}"></i>
+          </a>
+          `).join('')}
         </div>
-        <div class="wrp-2">
-          <ul>
-            <li class="name">${data.hotelName}</li>
-            <li>${data.address}</li>
-            <li>訂房專線： ${data.phone}</li>
-            <li>傳真號碼： ${data.fax}</li>
-          </ul>
-          <div class="share">
-            <p class="title">Follow Us</p>
-  `;
-
-  data.social.forEach(item => {
-    html += `
-      <a target="_blank" href="${item.href}" class="icon">
-        <span class="text-hide">${item.name}</span>
-        <i class="fa ${item.icon}" aria-hidden="true"></i>
-      </a>
-    `;
-  });
-
-  html += `</div></div><div class="wrp-3 chain">
-      <span class="chainname">特思得酒店集團</span>`;
-
-  data.chains.forEach(group => {
-    html += `<h3>${group.group}</h3>`;
-    html += group.links.map(name => `<a href="#" target="_blank">${name}</a>`).join(" │ ");
-  });
-
-  html += `</div></div>
-    <div class="footer-note">
-      <p>${data.bottomText}</p>
-      <p>${data.note}</p>
-      <button style="margin-top:0.5em;padding:0.5em 1em;">${data.button}</button>
+      </div>
     </div>
-    </footer>`;
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+  ${(() => {
+    const columns = [[], [], [], []];
+    data.chains.forEach((group, index) => {
+      const groupHTML = `
+        <div class="group-column mb-3">
+          <div class="group-title">${group.group}</div>
+          <ul class="group-list">
+            ${group.links.map(name => `<li><a href="#">${name}</a></li>`).join("")}
+          </ul>
+        </div>
+      `;
+      columns[index % 4].push(groupHTML);
+    });
+    return columns.map(col => `<div class="col">${col.join("")}</div>`).join("");
+  })()}
+</div>
+
+  </div>
+  <!-- row end -->
+
+  <div class="text-center border-top pt-3 small text-muted">
+    <p class="mb-1">${data.bottomText}</p>
+    <p class="mb-2">${data.note}</p>
+    <button class="btn btn-outline-dark btn-sm">${data.button}</button>
+  </div>
+  </div>
+</footer>
+  `;
 
   target.innerHTML = html;
 };

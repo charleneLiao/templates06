@@ -1,0 +1,74 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+@function is-dark($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  $luminance: (0.299 * $r + 0.587 * $g + 0.114 * $b);
+  @return $luminance < 140; // 可自行調整臨界值
+}
+@mixin auto-button($bg-color) {
+    $text-color: if(is-dark($bg-color), $white, $black);
+    $ring-color: rgba($bg-color, 0.4);
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 0.6em 2em;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: box-shadow 0.2s ease, background-color 0.3s ease;
+    font-size: $font;
+    font-weight: initial;
+
+    &:hover {
+        background-color: lighten($bg-color, 10%);
+        color: $text-color;
+    }
+
+    &:active {
+        box-shadow: 0 0 0 6px $ring-color; // ✅ 外擴的暈光圈
+    }
+
+    &:active:focus,&:focus  {
+        box-shadow: 0 0 0 .25rem rgba($ring-color, .2);
+    }
+}
+
+.btn {
+    @include auto-button($primary);
+}
+
+.btn-primary {
+    @include auto-button($primary);
+    border: none;
+}
+
+.btn-member {
+    @include auto-button($secondary01);
+}
+
+.btn-restaurant {
+    @include auto-button($secondary02);
+}
+
+.btn-bookroom {
+    @include auto-button($secondary03);
+}
+.btn-outline-secondary{
+@include auto-button($white);
+
+}
+.b-s {
+    padding: 4px 10px;
+}
+
+.b-m {
+    padding: 5px 15px;
+}
+
+.b-l {
+    padding: 0.6em 3.3em;
+    font-size: 1em;
+}
