@@ -62,7 +62,7 @@ window.loadFooter = function () {
         </div>
       </div>
     </div>
-<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
   ${(() => {
     const columns = [[], [], [], []];
     data.chains.forEach((group, index) => {

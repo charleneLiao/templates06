@@ -1026,6 +1026,11 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 576px) {
+  .footerComponent img {
+    margin: 0 auto;
+  }
+}
 .footerComponent .group-column .group-title {
   font-weight: bold;
   font-size: 1.05rem;
