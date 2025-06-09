@@ -14,15 +14,15 @@ window.loadDiningFacilities = function () {
 
         <div class="marquee-wrapper overflow-hidden py-3 bg-light">
           <ul class="marquee d-flex align-items-center mb-0">
-            <li><img src="images/food-s-pic/sfd01.jpg" alt="圖1" class="" /></li>
-            <li><img src="images/food-s-pic/sfd02.jpg" alt="圖2" class="" /></li>
-            <li><img src="images/food-s-pic/sfd03.jpg" alt="圖3" class="" /></li>
-            <li><img src="images/food-s-pic/sfd04.jpg" alt="圖4" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-01.jpg" alt="圖1" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-03.jpg" alt="圖3" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-04.jpg" alt="圖4" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-05.jpg" alt="圖1" class="" /></li>
             <!-- 重複一組用來無限輪播 -->
-            <li><img src="images/food-s-pic/sfd05.jpg" alt="圖1" class="" /></li>
-            <li><img src="images/food-s-pic/sfd06.jpg" alt="圖2" class="" /></li>
-            <li><img src="images/food-s-pic/sfd07.jpg" alt="圖3" class="" /></li>
-            <li><img src="images/food-s-pic/sfd08.jpg" alt="圖4" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-06.jpg" alt="圖2" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-07.jpg" alt="圖3" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-08.jpg" alt="圖4" class="" /></li>
+            <li><img src="images/food-s-pic/sfd-11.jpg" alt="圖2" class="" /></li>
           </ul>
         </div>
 
