@@ -12,6 +12,31 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "住宿優惠"
         },
         {
+            img: "https://www.taiwan.net.tw/userfiles/image/2018photo/fooding.jpg",
+            title: "連住兩晚享第2晚半價",
+            content: "連續入住兩晚即可享有第2晚五折優惠，讓你省更多、玩更久，輕鬆延長假期的美好時光！",
+            category: "住宿優惠"
+        },
+        {
+            img: "https://www.taiwan.net.tw/userfiles/image/2018photo/bike.jpg",
+            title: "免費腳踏車租借服務",
+            content: "入住期間免費提供腳踏車租借服務，騎乘漫遊在地巷弄，體驗最地道的城市風景。",
+            category: "住宿優惠"
+        },
+        {
+            img: "https://www.taiwan.net.tw/userfiles/image/2018photo/love.jpg",
+            title: "情侶入住送紅酒與花束",
+            content: "即日起至七夕，預訂雙人房即贈進口紅酒與精緻花束，為你的浪漫時光增添濃情蜜意。",
+            category: "住宿優惠"
+        },
+        {
+            img: "https://www.taiwan.net.tw/userfiles/image/2018photo/sunset.jpg",
+            title: "入住即享觀景酒吧9折券",
+            content: "凡入住即贈觀景酒吧9折優惠券，夜晚小酌同時飽覽城市夜景，享受不一樣的放鬆時刻。",
+            category: "住宿優惠"
+        },
+
+        {
             img: "https://www.taiwan.net.tw/userfiles/image/2018photo/heighway.jpg",
             title: "入住即贈台灣高鐵折價券",
             content: "旅行從抵達就開始有驚喜！凡預訂本飯店任一房型，即可獲得高鐵NT$100折價券，輕鬆節省交通費，旅程更愉快。",

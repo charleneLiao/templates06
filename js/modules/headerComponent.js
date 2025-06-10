@@ -63,10 +63,10 @@ window.loadHeader = function () {
     items: [
       { title: "最新消息", href: "news.html", 
         children: [
-          { title: "住宿優惠", href: "news-stay.html" },
-          { title: "餐飲優惠", href: "news-food.html" },
-          { title: "活動訊息", href: "news-activity.html" },
-          { title: "藝文活動", href: "news-art.html" }
+          { title: "住宿優惠", href: "news.html?category=住宿優惠" },
+          { title: "餐飲優惠", href: "news.html?category=餐飲優惠" },
+          { title: "活動訊息", href: "news.html?category=活動訊息" },
+          { title: "藝文活動", href: "news.html?category=藝文活動" }
         ] },
       {
         title: "房型介紹",
@@ -194,3 +194,5 @@ window.loadHeader = function () {
     }
   });
 };
+
+

@@ -78,5 +78,18 @@
   <script src="js/tools/owl.carousel.min.js"></script>
   <script src="js/tools/carouselTabs.js"></script>
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  if (category) {
+    const target = document.querySelector(`[data-category="${category}"]`);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+});
+</script>
 
 </html>
+
