@@ -20,4 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     $carousel.trigger("to.owl.carousel", [index, 300]);
   });
+// 卡片動畫
+  const cards = document.querySelectorAll(".cardAnime");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("card-fade-in");
+          observer.unobserve(entry.target); // 只觸發一次
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  cards.forEach((card) => observer.observe(card));
 });
+

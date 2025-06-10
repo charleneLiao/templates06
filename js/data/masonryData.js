@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         group.innerHTML = `
       <div class="row">
         ${matched.map(article => `
-          <a href="news_detail.html" class="col-12 col-md-6 col-lg-4 mb-4">
+          <a href="news_detail.html" class="cardAnime col-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100 border-0 shadow-sm">
               <img src="${article.img}" class="card-img-top" alt="${article.title}">
               <div class="card-body">
@@ -118,4 +118,41 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+    // 連結點擊直接住停在該分類
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    if (category) {
+        const currentScrollY = window.scrollY;
+
+        document.querySelectorAll(".category-group").forEach(group => {
+            group.style.display = "none";
+        });
+
+        const target = document.querySelector(`.category-group[data-category="${category}"]`);
+        if (target) {
+            target.style.display = "block";
+            target.querySelectorAll(".cardAnime").forEach(card => {
+                card.classList.add("card-fade-in");
+            });
+        }
+
+        // ✅ 將對應 tab 加上 active 樣式
+        navLinks.forEach(link => {
+            if (link.dataset.category === category) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+
+        // ✅ 還原 scroll 避免跳動
+        requestAnimationFrame(() => {
+            window.scrollTo({
+                top: currentScrollY,
+                behavior: "auto"
+            });
+        });
+    }
+
 });
