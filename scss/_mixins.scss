@@ -208,3 +208,21 @@
     gap: 0;
   }
 }
+
+@mixin title-animation($direction: down, $duration: 1s, $delay: 0s) {
+  opacity: 0;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+
+  @if $direction == down {
+    animation-name: slideDownFade;
+  } @else if $direction == left {
+    animation-name: slideLeftFade;
+  } @else if $direction == right {
+    animation-name: slideRightFade;
+  } @else if $direction == up {
+    animation-name: slideUpFade;
+  }
+}

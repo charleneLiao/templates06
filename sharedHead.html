@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-
-<head>
 <!-- START: shared head -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +13,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
 
 <!-- 外掛 JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -38,48 +35,3 @@
   });
 </script>
 <!-- END: shared head -->
-
-
-
-
-
-
-
-<title>TESTO HOTEL</title>
-</head>
-
-<body>
-
-
-
-
-  <main>
-    <div id="headerComponent"></div>
-    <div id="bannerComponent"></div> <!-- 大廣告 -->
-    <div id="bookingBarComponent"></div> <!-- 日期訂房器 -->
-    <div id="specialOffersComponent"></div> <!--優惠活動 -->
-    <div id="popularRoomsComponent"></div> <!--熱門房型 -->
-    <div id="diningFacilitiesComponent"></div> <!--餐飲設施 -->
-    <div id="footerComponent"></div>
-  </main>
-  <script src="js/vue.global.prod.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/data/roomIntro.js"></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/tools/goTop.js" defer></script>
-  <script>
-
-    flatpickr("#checkIn", {
-      dateFormat: "Y/m/d",
-      minDate: "today"
-    });
-
-    flatpickr("#checkOut", {
-      dateFormat: "Y/m/d",
-      minDate: "today"
-    });
-
-  </script>
-</body>
-
-</html>

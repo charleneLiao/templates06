@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTO HOTEL</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- 主樣式 -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 外掛樣式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- 外掛 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+
+  <!-- 自訂功能 -->
+  <script src="js/include.js" defer></script>
+  <script src="js/tools/goTop.js" defer></script>
+  <script src="js/modules/headerComponent.js" defer></script>
+  <script src="js/modules/footerComponent.js" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof loadHeader === "function") loadHeader();
+      if (typeof loadFooter === "function") loadFooter();
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="headerComponent"></div>
+
+  <main>
+    <div class="container mt-3">
+      <div class="hd title text-center mb-4">
+        <h1>NEWS</h1>
+        <p>最新消息</p>
+      </div>
+
+      <div class="content">
+        <div class="carousel-nav d-flex justify-content-center gap-3 mb-3">
+          <a href="#" class="active" data-category="住宿優惠">住宿優惠</a>
+          <a href="#" data-category="餐飲優惠">餐飲優惠</a>
+          <a href="#" data-category="活動訊息">活動訊息</a>
+          <a href="#" data-category="藝文活動">藝文活動</a>
+        </div>
+        <div id="categoryContainer" class="">
+          <div class="category-group" data-category="住宿優惠">
+          </div>
+          <div class="category-group" data-category="餐飲優惠">
+          </div>
+          <div class="category-group" data-category="活動訊息">
+          </div>
+          <div class="category-group" data-category="藝文活動">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footerComponent"></div>
+  <script src="js/data/masonryData.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="js/tools/owl.carousel.min.js"></script>
+  <script src="js/tools/carouselTabs.js"></script>
+</body>
+
+</html>

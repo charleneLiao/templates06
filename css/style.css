@@ -394,6 +394,46 @@ a {
   font-size: 1em;
 }
 
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideLeftFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRightFade {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 #headerComponent .gn-header {
   transition: transform 0.8s ease-out, opacity 0.8s ease-out;
   will-change: transform, opacity;
@@ -688,6 +728,30 @@ a {
 
 #headerMain {
   transition: opacity 0.4s ease;
+}
+
+main .hd.title {
+  text-align: left !important;
+}
+main .hd.title h1 {
+  font-family: "ui-monospace";
+  text-transform: uppercase;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: slideDownFade;
+}
+main .hd.title p {
+  color: #a7a6a1;
+  letter-spacing: 1em;
+  opacity: 0;
+  animation-duration: 1.2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: slideLeftFade;
 }
 
 .bookingBarComponent {
@@ -1013,6 +1077,132 @@ a {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.carousel-nav {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+.carousel-nav a {
+  color: #777777;
+  padding: 0.6em 2.5em;
+  text-align: center;
+  display: inline-block;
+}
+.carousel-nav a:hover, .carousel-nav a.active {
+  color: #a38300;
+}
+
+.owl-1 .owl-nav {
+  display: none;
+}
+
+.media-29101 .img {
+  flex: 0 0 50%;
+}
+.media-29101 .text {
+  padding: 50px;
+}
+@media (max-width: 768px) {
+  .media-29101 .text {
+    padding: 20px;
+    width: 100%;
+  }
+}
+.media-29101 .text .category {
+  color: #a7a6a1;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+.media-29101 .text h2 {
+  font-family: "Playfair Display", times, serif;
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.media-29101 .text h2 a {
+  color: #000000;
+}
+
+.masonry {
+  -moz-columns: 250px;
+       columns: 250px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  padding: 1rem;
+}
+.masonry article {
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+}
+.masonry article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+.masonry article h3 {
+  font-weight: normal;
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+.masonry article p {
+  color: #555;
+  line-height: 1.6;
+}
+.masonry a {
+  color: #000;
+  text-decoration: none;
+}
+.masonry a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.owl-carousel .item h3 {
+  margin-top: 1em;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+.category-group.active {
+  display: block;
+}
+
+.category-group .card {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+#news #detail .newsitem {
+  margin-right: 1em;
+}
+#news #detail .dateWrap {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+#news #detail .dateWrap .newsday {
+  margin: 0 0 0 1em;
+}
+#news #detail img {
+  margin: 1em 0;
+}
+#news #detail ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .footerComponent {

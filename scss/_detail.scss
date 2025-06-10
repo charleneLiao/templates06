@@ -1,0 +1,33 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './animations';
+@use './mixins' as *;
+
+#news {
+    #detail {
+        h2 {}
+
+        .newsitem {
+            margin-right: 1em;
+        }
+
+        .dateWrap {
+            display: inline-flex;
+            width: 100%;
+            align-items: center;
+            justify-items: center;
+            .newsday{
+                margin: 0 0 0 1em;
+            }
+        }
+
+        img {
+            margin: 1em 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+    }
+}

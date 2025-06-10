@@ -18,7 +18,9 @@ window.loadHeader = function () {
 
     wrapper.innerHTML += `
       <div class="logo d-flex align-items-center">
-        <img src="images/TESTOLOGO.svg" alt="TESTO HOTEL" height="50" />
+      <a href="index.html">
+      <img src="images/TESTOLOGO.svg" alt="TESTO HOTEL" height="50" />
+      </a>
       </div>
       <div class="language-selector dropdown d-md-block ms-auto">
         <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,7 +33,7 @@ window.loadHeader = function () {
         </ul>
       </div>
       <div class="action-buttons d-flex gap-2">
-        <button class="btn btn-bookroom">客房預訂</button>
+        <a href="booking.html" class="btn btn-bookroom">客房預訂</a>
         <button class="btn btn-restaurant">餐廳預訂</button>
         <button class="btn btn-member">加入會員</button>
       </div>
@@ -59,20 +61,26 @@ window.loadHeader = function () {
 
   const data = {
     items: [
-      { title: "房型介紹", href: "rooms.html", children: [] },
-      {
-        title: "最新消息",
-        href: "news.html",
+      { title: "最新消息", href: "news.html", 
         children: [
-          { title: "住宿優惠", href: "news.html" },
-          { title: "餐飲優惠", href: "news.html" },
-          { title: "活動訊息", href: "news.html" },
-          { title: "藝文活動", href: "news.html" }
+          { title: "住宿優惠", href: "news-stay.html" },
+          { title: "餐飲優惠", href: "news-food.html" },
+          { title: "活動訊息", href: "news-activity.html" },
+          { title: "藝文活動", href: "news-art.html" }
+        ] },
+      {
+        title: "房型介紹",
+        href: "rooms.html",
+        children: [
+          { title: "尊爵VIP", href: "rooms-vip.html" },
+          { title: "豪華房", href: "rooms-elegant.html" },
+          { title: "經典房", href: "rooms-classic.html" },
+          { title: "商務房", href: "rooms-business.html" }
         ]
       },
       { title: "飯店介紹", href: "about.html", children: [] },
       { title: "設施介紹", href: "facility.html", children: [] },
-      { title: "交通位置", href: "traffic.html", target: "_blank", children: [] },
+      { title: "交通位置", href: "location.html", target: "_blank", children: [] },
       { title: "聯絡我們", href: "javascript:void(0)", modalTarget: "#myModal", children: [] },
     ]
   };

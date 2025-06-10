@@ -1,20 +1,23 @@
+// js/sharedEnhancements.js
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.getElementById("scrollToTopBtn");
+  // 建立回到頂部按鈕
+  const btn = document.createElement("button");
+  btn.id = "scrollToTopBtn";
+  btn.title = "回到頂部";
+  btn.textContent = "↑";
+  document.body.appendChild(btn);
 
-    // 捲動顯示按鈕
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
-            scrollBtn.classList.add("show");
-        } else {
-            scrollBtn.classList.remove("show");
-        }
-    });
+  // 顯示按鈕邏輯
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
 
-    // 點擊滾回頂部
-    scrollBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+  // 點擊滑動回頂部
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });

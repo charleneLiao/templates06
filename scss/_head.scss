@@ -1,5 +1,6 @@
 @use './variables' as *;
 @use './breakpoints' as *;
+@use './animations';
 @use './mixins' as *;
 
 #headerComponent {
@@ -346,4 +347,23 @@
 
 #headerMain {
   transition: opacity 0.4s ease;
+}
+
+//每頁標題
+main{
+  .hd{
+    &.title{
+      text-align: left !important;
+      h1{
+        font-family: $font-family-en;
+        text-transform: uppercase;
+        @include title-animation(down, 1s, 0s); // 從上滑入
+      }
+      p{
+        color: $gray-secondary;
+        letter-spacing: 1em;
+        @include title-animation(left, 1.2s, 0.2s); // 從左滑入，稍慢
+      }
+    }
+  }
 }

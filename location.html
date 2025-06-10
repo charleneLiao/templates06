@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
 <!-- START: shared head -->
 <meta charset="UTF-8">
@@ -40,46 +39,22 @@
 <!-- END: shared head -->
 
 
-
-
-
-
-
-<title>TESTO HOTEL</title>
+<!-- START: shared head -->
+<!-- 此區塊將由 injectHead.js 自動補上 -->
 </head>
-
 <body>
 
 
 
+  <div id="headerComponent"></div>
 
   <main>
-    <div id="headerComponent"></div>
-    <div id="bannerComponent"></div> <!-- 大廣告 -->
-    <div id="bookingBarComponent"></div> <!-- 日期訂房器 -->
-    <div id="specialOffersComponent"></div> <!--優惠活動 -->
-    <div id="popularRoomsComponent"></div> <!--熱門房型 -->
-    <div id="diningFacilitiesComponent"></div> <!--餐飲設施 -->
-    <div id="footerComponent"></div>
-  </main>
-  <script src="js/vue.global.prod.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/data/roomIntro.js"></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/tools/goTop.js" defer></script>
-  <script>
+  <div class="hd">
+    <h1>location</h1>
+    <p>此頁尚未填寫內容。</p>
+  </div>
+</main>
 
-    flatpickr("#checkIn", {
-      dateFormat: "Y/m/d",
-      minDate: "today"
-    });
-
-    flatpickr("#checkOut", {
-      dateFormat: "Y/m/d",
-      minDate: "today"
-    });
-
-  </script>
+  <div id="footerComponent"></div>
 </body>
-
 </html>
