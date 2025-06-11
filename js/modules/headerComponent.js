@@ -72,16 +72,15 @@ window.loadHeader = function () {
         title: "房型介紹",
         href: "rooms.html",
         children: [
-          { title: "尊爵VIP", href: "rooms-vip.html" },
-          { title: "豪華房", href: "rooms-elegant.html" },
-          { title: "經典房", href: "rooms-classic.html" },
-          { title: "商務房", href: "rooms-business.html" }
+          { title: "尊爵VIP", href: "rooms.html?category=尊爵VIP" },
+          { title: "豪華房", href: "rooms.html?category=豪華房" },
+          { title: "經典房", href: "rooms.html?category=經典房" },
+          { title: "商務房", href: "rooms.html?category=商務房" }
         ]
       },
       { title: "飯店介紹", href: "about.html", children: [] },
       { title: "設施介紹", href: "facility.html", children: [] },
-      { title: "交通位置", href: "location.html", target: "_blank", children: [] },
-      { title: "聯絡我們", href: "javascript:void(0)", modalTarget: "#myModal", children: [] },
+      { title: "聯絡我們", href: "location.html", children: [] },
     ]
   };
 

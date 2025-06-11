@@ -4,3 +4,12 @@ $breakpoints: (
   lg: 992,
   xl: 1200,
 );
+
+@media (min-width: 576px) {
+    .container, .container-sm {
+        // max-width: 92%;
+    }
+}
+.container{
+  margin-bottom: 5em;
+}

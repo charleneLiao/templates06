@@ -1,60 +1,108 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-<!-- START: shared head -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TESTO HOTEL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTO HOTEL</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- 主樣式 -->
-<link rel="stylesheet" href="css/style.css">
+  <!-- 主樣式 -->
+  <link rel="stylesheet" href="css/style.css">
 
-<!-- 外掛樣式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- 外掛樣式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- 引入 AOS 動畫套件 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
-<!-- 外掛 JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+  <!-- 外掛 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
 
-<!-- 自訂功能：include.js + 回頂按鈕 -->
-<script src="js/include.js" defer></script>
-<script src="js/tools/goTop.js" defer></script>
+  <!-- 自訂功能 -->
+  <script src="js/include.js" defer></script>
+  <script src="js/tools/goTop.js" defer></script>
+  <script src="js/modules/headerComponent.js" defer></script>
+  <script src="js/modules/footerComponent.js" defer></script>
 
-<!-- ✅ 載入 header/footer JS 並初始化 -->
-<script src="js/modules/headerComponent.js" defer></script>
-<script src="js/modules/footerComponent.js" defer></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (typeof loadHeader === "function") loadHeader();
-    if (typeof loadFooter === "function") loadFooter();
-  });
-</script>
-<!-- END: shared head -->
-
-
-<!-- START: shared head -->
-<!-- 此區塊將由 injectHead.js 自動補上 -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof loadHeader === "function") loadHeader();
+      if (typeof loadFooter === "function") loadFooter();
+    });
+  </script>
 </head>
+
 <body>
-
-
 
   <div id="headerComponent"></div>
 
   <main>
-  <div class="hd">
-    <h1>location</h1>
-    <p>此頁尚未填寫內容。</p>
-  </div>
-</main>
+    <div class="container mt-3">
+      <div class="hd title text-center mb-4">
+        <h1>We are here</h1>
+        <p>我們在這裡</p>
+      </div>
+      <div class="content">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <!-- Google Map -->
+            <div class="col-md-8 mb-4 mb-md-0" data-aos="fade-right">
+              <div class="ratio ratio-4x3 rounded shadow" style="height: 400px;">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3086438268243!2d120.3021265!3d22.708271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e048a352c2d0d%3A0x7f88f477bc7b1355!2z5Y-w5Lit5bGx6Zuy5Y-w5rKz5biC5paw5p2x6LevMzjomZ8!5e0!3m2!1szh-TW!2stw!4v1718099999999"
+                  width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+
+            <!-- 聯絡資訊 -->
+            <div class="col-md-4" data-aos="fade-left">
+              <h3 class="fw-bold mb-3">交通資訊</h3>
+              <p class="mb-2"><strong>高雄特斯德酒店</strong></p>
+              <p class="mb-2">地址：高雄市新光路38號24F-6</p>
+              <p class="mb-2">訂房專線：<a href="tel:+88679682715">+886-7-968-2715</a></p>
+              <p class="mb-2">傳真號碼：+886-7-952-2221</p>
+              <p class="text-muted mt-3">可搭乘捷運至「三多商圈站」，步行約5分鐘。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 
   <div id="footerComponent"></div>
+  <script src="js/data/roomData.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="js/tools/owl.carousel.min.js"></script>
+  <script src="js/tools/carouselTabs.js"></script>
+  <!-- AOS 動畫腳本 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+    if (category) {
+      const target = document.querySelector(`[data-category="${category}"]`);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  });
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
 </html>

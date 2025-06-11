@@ -1,0 +1,52 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './animations';
+@use './mixins' as *;
+
+.cardAnime {
+    display: block; // 確保 <a> 是區塊元素
+    text-decoration: none; // 移除連結底線等預設樣式
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #373737;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // 初始陰影
+        overflow: hidden;
+
+        .card-title {
+            margin: 0.6em 0 0.8em 0;
+        }
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // 滑入效果
+            border: none;
+            color: $primary;
+        }
+
+        .card-img-top {
+            transition: transform 0.4s ease;
+        }
+
+        &:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover .card-body {
+            opacity: 0.95;
+        }
+    }
+
+    &:hover .card-img-top {
+        transform: scale(1.05); // 圖片放大
+    }
+
+    &:hover .card-body {
+        opacity: 0.95; // 內文微透明，視覺層次
+    }
+}

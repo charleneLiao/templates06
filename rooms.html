@@ -1,67 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-<!-- START: shared head -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TESTO HOTEL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTO HOTEL</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- 主樣式 -->
-<link rel="stylesheet" href="css/style.css">
-
-<!-- 外掛樣式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-
-<!-- 外掛 JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
-
-<!-- 自訂功能：include.js + 回頂按鈕 -->
-<script src="js/include.js" defer></script>
-<script src="js/tools/goTop.js" defer></script>
-
-<!-- ✅ 載入 header/footer JS 並初始化 -->
-<script src="js/modules/headerComponent.js" defer></script>
-<script src="js/modules/footerComponent.js" defer></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (typeof loadHeader === "function") loadHeader();
-    if (typeof loadFooter === "function") loadFooter();
-  });
-</script>
-<!-- END: shared head -->
-
-
-
-
-
-
-
-  <meta charset="UTF-8" />
-  <title>房型介紹</title>
+  <!-- 主樣式 -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- 外掛樣式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- 外掛 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+
+  <!-- 自訂功能 -->
+  <script src="js/include.js" defer></script>
+  <script src="js/tools/goTop.js" defer></script>
+  <script src="js/modules/headerComponent.js" defer></script>
+  <script src="js/modules/footerComponent.js" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof loadHeader === "function") loadHeader();
+      if (typeof loadFooter === "function") loadFooter();
+    });
+  </script>
 </head>
+
 <body>
 
-
-
   <div id="headerComponent"></div>
-  <main>
-  <div class="hd">
-    <h1>rooms</h1>
-    <p>此頁尚未填寫內容。</p>
-  </div>
-</main>
-  <div id="footerComponent"></div>
 
-  <h1>房型介紹</h1>
-  <p>此頁尚未填寫內容。</p>
+  <main>
+    <div class="container mt-3">
+      <div class="hd title text-center mb-4">
+        <h1>ROOM TYPE</h1>
+        <p>房型介紹</p>
+      </div>
+
+      <div class="content">
+        <div class="carousel-nav d-flex justify-content-center gap-3 mb-10">
+          <a href="#" class="active" data-category="尊爵VIP">尊爵VIP</a>
+          <a href="#" data-category="豪華房">豪華房</a>
+          <a href="#" data-category="經典房">經典房</a>
+          <a href="#" data-category="商務房">商務房</a>
+        </div>
+        <div id="categoryContainer" class="">
+          <div class="category-group" data-category="尊爵VIP">
+          </div>
+          <div class="category-group" data-category="豪華房">
+          </div>
+          <div class="category-group" data-category="經典房">
+          </div>
+          <div class="category-group" data-category="商務房">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footerComponent"></div>
+  <script src="js/data/roomData.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="js/tools/owl.carousel.min.js"></script>
+  <script src="js/tools/carouselTabs.js"></script>
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  if (category) {
+    const target = document.querySelector(`[data-category="${category}"]`);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+});
+</script>
+
 </html>
+

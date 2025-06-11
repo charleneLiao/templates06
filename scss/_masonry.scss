@@ -45,8 +45,8 @@
 
 .owl-carousel {
     .item {
-        img{
-        }
+        img {}
+
         h3 {
             margin-top: 1em;
             font-weight: normal;
@@ -55,14 +55,150 @@
     }
 }
 
+#categoryContainer {
+    margin-bottom: 3em;
+}
+
 .category-group {
+    .row {
+        // gap: 1em;
+    }
 }
 
 .category-group.active {
-  display: block;
+    display: block;
 }
 
 .category-group .card {
-  break-inside: avoid;
-  margin-bottom: 1.5rem;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+// 酒店介紹
+.room-slider-wrapper {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 6em;
+    .external-slider-caption {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5em 2em;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        z-index: 20;
+        max-width: 90%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0;
+            color: #444;
+        }
+    }
+
+    .room-slider {
+        .item {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .slider-caption {
+                display: none; // 原始內部 caption 隱藏，用於資料來源
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+
+            button {
+                pointer-events: auto;
+                background: rgba(0, 0, 0, 0.4);
+                border: none;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, background 0.3s ease;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                    transform: scale(1.2);
+                }
+
+                .arrow-icon {
+                    width: 3.5em;
+                    height: 3.5em;
+                    stroke: white;
+                    transition: stroke 0.3s ease;
+                }
+
+                &:hover .arrow-icon {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+/* RWD 調整 */
+@media (max-width: 768px) {
+    .room-slider .item {
+        height: 220px;
+
+        .slider-caption {
+            bottom: -20px;
+            padding: 1em;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .room-slider .owl-nav button {
+        width: 36px;
+        height: 36px;
+
+        .arrow-icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
 }

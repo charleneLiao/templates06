@@ -1,60 +1,199 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-<!-- START: shared head -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TESTO HOTEL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTO HOTEL</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- 主樣式 -->
-<link rel="stylesheet" href="css/style.css">
+  <!-- 主樣式 -->
+  <link rel="stylesheet" href="css/style.css">
 
-<!-- 外掛樣式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- 外掛樣式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-<!-- 外掛 JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+  <!-- 外掛 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
 
-<!-- 自訂功能：include.js + 回頂按鈕 -->
-<script src="js/include.js" defer></script>
-<script src="js/tools/goTop.js" defer></script>
+  <!-- 自訂功能 -->
+  <script src="js/include.js" defer></script>
+  <script src="js/tools/goTop.js" defer></script>
+  <script src="js/modules/headerComponent.js" defer></script>
+  <script src="js/modules/footerComponent.js" defer></script>
 
-<!-- ✅ 載入 header/footer JS 並初始化 -->
-<script src="js/modules/headerComponent.js" defer></script>
-<script src="js/modules/footerComponent.js" defer></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (typeof loadHeader === "function") loadHeader();
-    if (typeof loadFooter === "function") loadFooter();
-  });
-</script>
-<!-- END: shared head -->
-
-
-<!-- START: shared head -->
-<!-- 此區塊將由 injectHead.js 自動補上 -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof loadHeader === "function") loadHeader();
+      if (typeof loadFooter === "function") loadFooter();
+    });
+  </script>
 </head>
+
 <body>
-
-
-
   <div id="headerComponent"></div>
-
   <main>
-  <div class="hd">
-    <h1>about</h1>
-    <p>此頁尚未填寫內容。</p>
-  </div>
-</main>
+    <div class="container mt-3">
+      <div class="hd title text-center mb-4">
+        <h1>OUR HOTEL</h1>
+        <p>酒店介紹</p>
+      </div>
+      <div class="content">
+        <!-- 輪播容器 -->
+        <div class="room-slider-wrapper">
+          <div class="owl-carousel owl-theme room-slider">
+            <div class="item">
+              <img src="images/taiwan.jpg" alt="room1" class="img-fluid">
+              <div class="slider-caption">
+                <h3>貴賓樓層・BREEZE STYLE</h3>
+                <p>由朝陽和陽光照耀波光粼粼的水面，倒映在客房，是讓人感受到海風吹過的愜意空間。</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/taiwan02.jpg" alt="room2" class="img-fluid">
+              <div class="slider-caption">
+                <h3>極致景觀・PANORAMA STYLE</h3>
+                <p>全景落地窗將城市天際線盡收眼底，為您的旅程增添無與倫比的視野與體驗。</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/taiwan01.jpg" alt="room3" class="img-fluid">
+              <div class="slider-caption">
+                <h3>靜謐逸境・SERENE STYLE</h3>
+                <p>低彩度設計融合柔和光線，打造專屬您的靜謐休息時光。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 外層浮動 caption 容器（由 JS 控制） -->
+          <div class="external-slider-caption">
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+        <!-- 輪播結束 -->
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h1 class="fw-bold">高雄・特斯德高級酒店</h1>
+            <p class="text-muted">城市靜謐中的優雅綠洲</p>
+          </div>
+
+          <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <img src="images/room/room-vip.jpg" alt="特斯德酒店外觀" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+              <h3 class="fw-bold">從容空間，靜謐質感</h3>
+              <p>
+                酒店備有多種客房選擇，包括尊爵VIP、豪華雙人房、經典客房與商務套房。
+                每間房皆採用溫潤木質色調、大片景觀窗與高規格床墊，營造自然與現代交織的安穩休憩感。
+              </p>
+            </div>
+          </div>
+
+          <div class="row align-items-center mb-5 flex-md-row-reverse">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <img src="images/news/news-tea.jpg" alt="酒店餐飲" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+              <h3 class="fw-bold">餐飲享受・觀景饗宴</h3>
+              <p>
+                館內設有全天候餐廳與觀景酒吧，提供精緻早午餐、特色下午茶及夜間微醺時光。
+                每一道餐點皆選用在地嚴選食材，讓旅人的味蕾也能體驗高雄的風土韻味。
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <h3 class="fw-bold mb-3">飯店特色設施</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">・免費腳踏車租借，暢遊愛河與鹽埕老街</li>
+              <li class="list-group-item">・親子友善空間，提供兒童加床與遊戲禮包</li>
+              <li class="list-group-item">・每週五晚間戶外音樂會，享受微風與旋律共舞</li>
+              <li class="list-group-item">・香氛蠟燭手作體驗，留下旅程的專屬氣味記憶</li>
+            </ul>
+          </div>
+
+          <div class="bg-light p-4 rounded shadow-sm mb-5">
+            <h4 class="fw-bold mb-3">限時專屬優惠</h4>
+            <ul class="mb-0">
+              <li>官網預訂享迎賓飲品</li>
+              <li>連住兩晚，第2晚五折優惠</li>
+              <li>夏季限時：雙人入住即贈精緻早餐＋延遲退房</li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+            <h5 class="fw-bold">在特斯德酒店，旅程不只是抵達，而是一場精緻而從容的體驗。</h5>
+            <p class="text-muted">立即預訂，開啟您的高雄優雅之旅。</p>
+            <a href="booking.html" class="btn btn-primary px-4 mt-3">立即預訂</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 
   <div id="footerComponent"></div>
+  <!-- <script src="js/data/roomData.js"></script> -->
+  <!-- Owl Carousel JS -->
+  <script src="js/tools/owl.carousel.min.js"></script>
+  <script src="js/tools/carouselTabs.js"></script>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+    if (category) {
+      const target = document.querySelector(`[data-category="${category}"]`);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    // 初始化 Owl Carousel
+    // 初始化 Owl
+    $('.room-slider').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      dots: true,
+      nav: true,
+      navText: [
+        `<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+        `<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+      ],
+      onInitialized: updateCaption,
+      onChanged: updateCaption
+    });
+
+    // 更新外部 caption 內容
+    function updateCaption(event) {
+      const index = event.item.index - event.relatedTarget._clones.length / 2;
+      const realIndex = (index + event.item.count) % event.item.count;
+      const $currentItem = $('.room-slider .owl-item').eq(realIndex).find('.slider-caption');
+
+      // 淡出
+      $('.external-slider-caption').removeClass('active');
+
+      setTimeout(() => {
+        $('.external-slider-caption h3').text($currentItem.find('h3').text());
+        $('.external-slider-caption p').text($currentItem.find('p').text());
+        $('.external-slider-caption').addClass('active');
+      }, 200);
+    }
+
+  });
+</script>
+
 </html>
