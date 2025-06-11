@@ -276,6 +276,7 @@
     .btn-restaurant {
       background-color: #6f4e37;
     }
+
     .btn-traffic {
       background-color: #e0e0e0;
     }
@@ -350,19 +351,34 @@
 }
 
 //每頁標題
-main{
-  .hd{
-    &.title{
-      text-align: left !important;
-      h1{
+main {
+  .hd {
+    &.title {
+      position: relative;
+      h1,p{
+        text-align: left;
+      }
+
+      h1 {
         font-family: $font-family-en;
         text-transform: uppercase;
         @include title-animation(down, 1s, 0s); // 從上滑入
       }
-      p{
+
+      p {
         color: $gray-secondary;
         letter-spacing: 1em;
         @include title-animation(left, 1.2s, 0.2s); // 從左滑入，稍慢
+      }
+
+      h2 {
+        float: right;
+        font-size: 3em;
+        color: rgba($primary, 0.2);
+        position: absolute;
+        top: 26%;
+        right: 0;
+        font-family: initial;
       }
     }
   }

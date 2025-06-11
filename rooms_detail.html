@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTO HOTEL</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 主樣式 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 外掛樣式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'>
+
+
+
+    <!-- 外掛 JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+
+    <!-- 自訂功能 -->
+    <script src="js/include.js" defer></script>
+    <script src="js/tools/goTop.js" defer></script>
+    <script src="js/modules/headerComponent.js" defer></script>
+    <script src="js/modules/footerComponent.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof loadHeader === "function") loadHeader();
+            if (typeof loadFooter === "function") loadFooter();
+            if (typeof loadBookingBar === "function") loadBookingBar();
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="headerComponent"></div>
+
+    <main>
+        <div id="rooms">
+            <div class="container mt-3">
+                <div class="hd title text-center mb-4">
+                    <h1>ROOM TYPE</h1>
+                    <p>房型介紹</p>
+                    <h2>尊爵房VIP</h2>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="in">
+                    <div id="detail" class="clearfix">
+                        <section class="section slider-section">
+                            <div class="container slider-column">
+                                <div class="swiper swiper-slider">
+                                    <div class="swiper-wrapper">
+                                        <img class="swiper-slide" src="images/room/room-vip03.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/room/room-vip04.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/room/room-vip05.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/room/room-vip03.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/room/room-vip04.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/room/room-vip05.jpg" alt="Swiper">
+                                    </div>
+                                    <span class="swiper-pagination"></span>
+                                    <span class="swiper-button-prev"></span>
+                                    <span class="swiper-button-next"></span>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- 下方內容 -->
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- 左側 9 欄：基本介紹 + 飯店基本資料 -->
+                                <div class="col-md-10">
+                                    <div id="bookingBarComponent"></div> <!-- 日期訂房器 -->
+                                    <div class="fancy-title">基本資料</div>
+                                    <div class="row g-3">
+                                        <!-- 單一卡片 start -->
+                                        <div class="col-6 col-md-3">
+                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fas fa-clock"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">入住時間</h6>
+                                                <p class="text-muted small mb-0">15:00 後</p>
+                                            </div>
+                                        </div>
+                                        <!-- 卡片結束，請複製 -->
+                                        <div class="col-6 col-md-3">
+                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fas fa-sign-out-alt"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">退房時間</h6>
+                                                <p class="text-muted small mb-0">12:00 前</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fa-solid fa-stopwatch"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">彈性保留</h6>
+                                                <p class="text-muted small mb-0">17:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fa-solid fa-money-bills"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">外幣兌換</h6>
+                                                <p class="text-muted small mb-0">無</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card green text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fa-regular fa-credit-card"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">刷卡服務</h6>
+                                                <p class="text-muted small mb-0">有</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fa-solid fa-paw"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">寵物共宿</h6>
+                                                <p class="text-muted small mb-0">無</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card green text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fa-solid fa-bicycle"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">單車入房</h6>
+                                                <p class="text-muted small mb-0">有</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card green text-center h-100 shadow-sm rounded-3 p-3">
+                                                <div class="icon-circle mx-auto mb-2">
+                                                    <i class="fa-solid fa-wifi"></i>
+                                                </div>
+                                                <h6 class="fw-bold mb-1">WIFI</h6>
+                                                <p class="text-muted small mb-0">有</p>
+                                            </div>
+                                        </div>
+                                        <!-- 更多項目可再複製 col-6 col-md-3 -->
+                                    </div>
+                                </div>
+
+                                <!-- 右側 3 欄：價格與圖片 -->
+                                <div class="col-md-2 text-center">
+                                    <h5 class="text-muted">每晚</h5>
+                                    <h2 class="text-primary fw-bold mb-3">NT$ 10,000</h2>
+                                    <div class="fancy-title">房內設備</div>
+                                    <div class="list-stuff">
+                                        <ul>
+                                            <li>Nespresso咖啡機</li>
+                                            <li>迎賓飲料&amp;甜點</li>
+                                            <li>電熱水壺</li>
+                                            <li>餐具（茶杯等）</li>
+                                            <li>開瓶器</li>
+                                            <li>冰箱</li>
+                                            <li>吹風機</li>
+                                            <li>洗面奶和洗手液</li>
+                                            <li>保險箱</li>
+                                        </ul>
+                                        <ul>
+                                            <li>空氣清淨機</li>
+                                            <li>免費Wi-Fi</li>
+                                            <li>報紙</li>
+                                            <li>薄型電視</li>
+                                            <li>除臭噴霧</li>
+                                            <li>鞋拔</li>
+                                            <li>衣架</li>
+                                            <li>衣刷</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mt-3">
+                                    <div class="fancy-title">其他事項</div>
+                                    <ul class="policy-list">
+                                        <li>行政俱樂部開放時間：06:30-22:00（限行政樓層房客使用）</li>
+                                        <li>行政俱樂部早餐：06:30-10:00（週六06:30-10:30）</li>
+                                        <li>雞尾酒會：17:00-19:00</li>
+                                        <li>訂金為房價之 50%</li>
+                                        <li>謝絕訪客，無加床服務，加人酌收 1,000 元清潔費。</li>
+                                        <li>請務必依照民宿人數入住，若自行增加人數，民宿有權加倍收費。</li>
+                                        <li>假日定義：週六；平日定義：週日至週五。</li>
+                                        <li>旺季：6 月～9 月、農曆新年及連續假日；淡季：10 月～5 月。</li>
+                                        <li>貴重物品請隨身攜帶妥善保管，如有遺失恕不負責。</li>
+                                        <li>為維護住宿安全，本民宿範圍內室內外皆禁菸、禁帶寵物、禁烤肉。</li>
+                                        <li>如私自攜帶寵物入住，恕不退費並強制退房。</li>
+                                        <li>嚴禁酗酒轟趴、嗑藥及違法行為，發現將立即報警處理。</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </main>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+
+    <div id="footerComponent"></div>
+</body>
+<script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
+<script src="js/swiper.js"></script>
+<script src="js/modules/bookingBarComponent.js" defer></script>
+<script>
+
+    flatpickr("#checkIn", {
+        dateFormat: "Y/m/d",
+        minDate: "today"
+    });
+
+    flatpickr("#checkOut", {
+        dateFormat: "Y/m/d",
+        minDate: "today"
+    });
+
+</script>
+
+</html>

@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         group.innerHTML = `
       <div class="row g-5">
         ${matched.map(article => `
-          <a href="news_detail.html" class="cardAnime col-12 col-md-6 col-lg-4 mb-4">
+          <a href="rooms_detail.html" class="cardAnime col-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100 border-0">
               <img src="${article.img}" class="card-img-top" alt="${article.title}">
               <div class="card-body">

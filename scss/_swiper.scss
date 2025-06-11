@@ -1,0 +1,90 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './animations';
+@use './mixins' as *;
+
+#rooms {
+    .container {
+        margin-bottom: 0;
+    }
+
+    >.container-fluid {
+        >.in {
+            margin-bottom: 5em;
+        }
+    }
+
+    .section {
+        margin: 0 auto;
+
+        .container {
+            height: auto;
+            margin-inline: auto;
+            padding-inline: 1.25rem;
+
+            img {}
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+
+            &::after {
+                font-size: 1rem;
+                font-weight: bold;
+                color: $white;
+            }
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.8);
+                transform: scale(1.15); // 滑入放大
+            }
+
+            &:active {
+                transform: scale(0.9); // 點擊壓下回彈
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background-color: $warning;
+            opacity: 0.4;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        .swiper-img-wrapper {
+            width: 100%;
+            aspect-ratio: 2 / 6; // 你也可以用 4 / 3 或 1 / 1
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+            img {
+                object-fit: cover; // ✔ 正確
+                image-rendering: auto; // 或試 image-rendering: crisp-edges;
+            }
+        }
+
+        .swiper-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.03); // 可選：滑入放大一點點
+            }
+        }
+
+    }
+}
