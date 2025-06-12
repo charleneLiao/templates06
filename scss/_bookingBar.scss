@@ -17,9 +17,9 @@
   }
 
   .hd {
-    background-color: #000;
+    background-color: $primary-light;
     padding: 0.5em;
-    color: $white;
+    color: $primary;
   }
   .btn-link,.btn.rounded-circle {
     font-size: 1.5rem;

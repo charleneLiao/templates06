@@ -20,11 +20,10 @@
         .container {
             height: auto;
             margin-inline: auto;
-            padding-inline: 1.25rem;
+            // padding-inline: 1.25rem;
 
             img {}
         }
-
         .swiper-button-next,
         .swiper-button-prev {
             width: 3rem;
@@ -86,5 +85,21 @@
             }
         }
 
+    }
+
+    @include respond-max(sm) {
+        .swiper {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+    }
+}
+
+#facility{
+    .swiper-wrapper{
+        height: 300px;
     }
 }

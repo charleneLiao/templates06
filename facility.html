@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-<!-- START: shared head -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TESTO HOTEL</title>
+  <!-- START: shared head -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTO HOTEL</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- 主樣式 -->
-<link rel="stylesheet" href="css/style.css">
+  <!-- 主樣式 -->
+  <link rel="stylesheet" href="css/style.css">
 
-<!-- 外掛樣式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- 外掛樣式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- 引入 AOS 動畫套件 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
-<!-- 外掛 JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+  <!-- 外掛 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
 
-<!-- 自訂功能：include.js + 回頂按鈕 -->
-<script src="js/include.js" defer></script>
-<script src="js/tools/goTop.js" defer></script>
+  <!-- 自訂功能：include.js + 回頂按鈕 -->
+  <script src="js/include.js" defer></script>
+  <script src="js/tools/goTop.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<!-- ✅ 載入 header/footer JS 並初始化 -->
-<script src="js/modules/headerComponent.js" defer></script>
-<script src="js/modules/footerComponent.js" defer></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (typeof loadHeader === "function") loadHeader();
-    if (typeof loadFooter === "function") loadFooter();
-  });
-</script>
-<!-- END: shared head -->
+  <!-- ✅ 載入 header/footer JS 並初始化 -->
+  <script src="js/modules/headerComponent.js" defer></script>
+  <script src="js/modules/footerComponent.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof loadHeader === "function") loadHeader();
+      if (typeof loadFooter === "function") loadFooter();
+    });
+  </script>
+  <!-- END: shared head -->
 
 
-<!-- START: shared head -->
-<!-- 此區塊將由 injectHead.js 自動補上 -->
+  <!-- START: shared head -->
+  <!-- 此區塊將由 injectHead.js 自動補上 -->
 </head>
+
 <body>
 
 
@@ -49,12 +54,83 @@
   <div id="headerComponent"></div>
 
   <main>
-  <div class="hd">
-    <h1>facility</h1>
-    <p>此頁尚未填寫內容。</p>
-  </div>
-</main>
+    <div id="facility" class="container py-5">
+
+      <!-- 標題 -->
+      <div class="hd title text-center mb-4">
+        <h1>Hotel Facilities</h1>
+        <p>飯店設施一覽</p>
+      </div>
+
+      <!-- 第一筆：左圖右卡 -->
+      <div class="row align-items-center facility-block mb-5">
+        <div class="col-lg-6 im-left" data-aos="fade-right">
+          <img src="images/facility/gym.jpg" class="facility-img" alt="健身房">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="facility-card p-4">
+            <h4 class="fw-bold text-center mb-3">活力健身中心</h4>
+            <p class="text-muted text-center">配備最先進的器材，讓您維持健康與活力。</p>
+            <ul class="list-unstyled text-center my-3">
+              <li>營業時間：06:00～22:00</li>
+              <li>電話：(07)123-4567</li>
+            </ul>
+            <div class="text-center">
+              <a href="facility_detail.html" class="btn btn-primary">詳細內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二筆：右圖左卡（flex-lg-row-reverse） -->
+      <div class="row align-items-center facility-block flex-lg-row-reverse mb-5">
+        <div class="col-lg-6 im-left" data-aos="fade-left">
+          <img src="images/facility/pool.jpg" class="facility-img" alt="SPA">
+        </div>
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="facility-card p-4">
+            <h4 class="fw-bold text-center mb-3">海景恆溫泳池</h4>
+            <p class="text-muted text-center">享受陽光下的暢泳時光，全年開放。</p>
+            <ul class="list-unstyled text-center my-3">
+              <li>營業時間：08:00～20:00</li>
+              <li>電話：(07)333-7890</li>
+            </ul>
+            <div class="text-center">
+              <a href="facility_detail.html" class="btn btn-primary">詳細內容</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三筆：左圖右卡 -->
+      <div class="row align-items-center facility-block mb-5">
+        <div class="col-lg-6 im-left" data-aos="fade-right">
+          <img src="images/facility/spa.jpg" class="facility-img" alt="泳池">
+        </div>
+        <div class="facility-card p-4">
+          <h4 class="fw-bold text-center mb-3">芳療按摩中心</h4>
+          <p class="text-muted text-center">放鬆心靈與身體的完美空間，提供專業芳療服務。</p>
+          <ul class="list-unstyled text-center my-3">
+            <li>營業時間：09:00～22:00</li>
+            <li>電話：(07)222-8888</li>
+          </ul>
+          <div class="text-center">
+            <a href="facility_detail.html" class="btn btn-primary">詳細內容</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
 
   <div id="footerComponent"></div>
+  <script>
+    AOS.init({
+      duration: 2000,
+      once: true
+    });
+  </script>
 </body>
+
 </html>

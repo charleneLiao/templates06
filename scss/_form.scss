@@ -1,0 +1,36 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './animations';
+@use './mixins' as *;
+
+// 改Bootstrap原生
+.form-control:disabled, .form-control[readonly] {
+    background-color: #e9e6da;
+}
+.form-control{
+    border-color: #ada893;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+}
+
+// 時機選取器-主題色
+.flatpickr-months .flatpickr-month, 
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+span.flatpickr-weekday,.flatpickr-weekdays,.flatpickr-day.selected
+{
+    background-color: $primary !important;
+}
+.flatpickr-day.selected{
+    border-color:  $primary !important;
+}
+.flatpickr-calendar.arrowTop:after{
+    border-bottom-color: $primary !important;
+}
+.form-control:focus{
+    border-color: #b2a261 !important;
+    box-shadow: 0 0 0 .25rem rgba($primary, .25) !important;
+}
+
+.specialOffersComponent .container .promo-slider .slick-dots li.slick-active button {
+    background-color: #e9c228;
+}

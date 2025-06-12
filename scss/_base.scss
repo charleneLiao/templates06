@@ -1,6 +1,7 @@
 @import './variables';
-a{
-    color: $text-color;
+
+a {
+  color: $text-color;
 }
 
 #scrollToTopBtn {
@@ -27,4 +28,97 @@ a{
     opacity: 1;
     visibility: visible;
   }
+}
+
+.hd-title {
+  padding: 1em 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  letter-spacing: 0.1em;
+  position: relative;
+  font-size: 2em;
+  width: 100%;
+  font-family: "Noto Serif TC", serif;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    background-image: url('../images/icon-title-r.svg');
+    margin-left: 1.9em;
+  }
+
+  &::before {
+    content: '';
+    display: inline-flex;
+    gap: 4px;
+    background-image: url('../images/icon-title-l.svg');
+    margin-right: 1.5em;
+
+    &::before,
+    &::after,
+    span {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      background: #aaa;
+    }
+
+    &::before {
+      height: 20px;
+    }
+
+    &::after {
+      height: 12px;
+    }
+
+    span {
+      height: 16px;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-flex;
+    gap: 4px;
+
+    &::before,
+    &::after,
+    span {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      background: #aaa;
+    }
+
+    &::before {
+      height: 20px;
+    }
+
+    &::after {
+      height: 12px;
+    }
+
+    span {
+      height: 16px;
+    }
+  }
+}
+#specialOffersComponent{
+  padding-top: 1em;
+}
+section{
+  padding: 2em 0;
 }

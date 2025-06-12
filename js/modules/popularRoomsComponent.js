@@ -5,10 +5,9 @@ window.loadPopularRooms = function () {
   if (!target) return;
 
   target.innerHTML = `
-    <section class="popularRoomsComponent py-5 bg-light text-center">
+    <section class="popularRoomsComponent bg-light text-center">
   <div class="container">
-
-    <h2 class="mb-5 fw-bold fs-2">房型</h2>
+    <h2 class="text-center hd-title">酒店房型</h2>
 
     <!-- 貴賓樓層 -->
     <div class="row align-items-center bg-white shadow-sm rounded overflow-hidden mb-5">

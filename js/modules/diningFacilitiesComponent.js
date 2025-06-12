@@ -7,10 +7,7 @@ window.loadDiningFacilities = function () {
   target.innerHTML = `
     <section class="diningFacilitiesComponent">
       <div class="container-fluid">
-      <h2 class="display-5 fw-bold text-center">
-        <em class="d-block">多元美饌 <br class="d-md-none">品味高雄</em>
-        <span class="d-block fs-6 text-muted mt-2">RESTAURANT &amp; BAR</span>
-      </h2>
+      <h2 class="text-center hd-title">多元美饌 <br class="d-md-none">品味高雄</h2>
 
         <div class="marquee-wrapper overflow-hidden py-3 bg-light">
           <ul class="marquee d-flex align-items-center mb-0">

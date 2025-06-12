@@ -7,8 +7,8 @@ window.loadSpecialOffers = function () {
   // 插入區塊 HTML 結構
   target.innerHTML = `
     <section class="specialOffersComponent">
-      <h2 class="text-center mb-4">最新消息</h2>
-      <div class="container py-5">
+      <h2 class="text-center hd-title">最新消息</h2>
+      <div class="container">
         <div class="promo-slider" id="promoSlider"></div>
       </div>
     </section>
@@ -33,7 +33,7 @@ window.loadSpecialOffers = function () {
           <p class="text-muted small mb-1">${promo.date}</p>
           <h5 class="card-title">${promo.title}</h5>
           <p class="card-text">${promo.desc}</p>
-          <a href="#" class="btn btn-primary w-100">詳細內容</a>
+          <a href="news_detail.html" class="btn btn-primary w-100">詳細內容</a>
         </div>
       </div>
     `;

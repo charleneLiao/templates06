@@ -33,8 +33,10 @@
     <!-- 自訂功能 -->
     <script src="js/include.js" defer></script>
     <script src="js/tools/goTop.js" defer></script>
+    <script src="js/tools/toggle.js" defer></script>
     <script src="js/modules/headerComponent.js" defer></script>
     <script src="js/modules/footerComponent.js" defer></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             if (typeof loadHeader === "function") loadHeader();
@@ -62,7 +64,7 @@
                 <div class="in">
                     <div id="detail" class="clearfix">
                         <section class="section slider-section">
-                            <div class="container slider-column">
+                            <div class="container-fluid slider-column">
                                 <div class="swiper swiper-slider">
                                     <div class="swiper-wrapper">
                                         <img class="swiper-slide" src="images/room/room-vip03.jpg" alt="Swiper">
@@ -84,90 +86,194 @@
                                 <!-- 左側 9 欄：基本介紹 + 飯店基本資料 -->
                                 <div class="col-md-10">
                                     <div id="bookingBarComponent"></div> <!-- 日期訂房器 -->
-                                    <div class="fancy-title">基本資料</div>
-                                    <div class="row g-3">
-                                        <!-- 單一卡片 start -->
-                                        <div class="col-6 col-md-3">
-                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fas fa-clock"></i>
+                                    <section>
+                                        <div class="fancy-title">熱門設施</div>
+                                        <div class="row g-3 sPicCard">
+                                            <!-- 單一卡片 start -->
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fas fa-clock"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">入住時間</h6>
+                                                    <p class="text-muted small mb-0">15:00 後</p>
                                                 </div>
-                                                <h6 class="fw-bold mb-1">入住時間</h6>
-                                                <p class="text-muted small mb-0">15:00 後</p>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fas fa-sign-out-alt"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">退房時間</h6>
+                                                    <p class="text-muted small mb-0">12:00 前</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-stopwatch"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">彈性保留</h6>
+                                                    <p class="text-muted small mb-0">17:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-money-bills"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">外幣兌換</h6>
+                                                    <p class="text-muted small mb-0">無</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-regular fa-credit-card"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">刷卡服務</h6>
+                                                    <p class="text-muted small mb-0">有</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-paw"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">寵物共宿</h6>
+                                                    <p class="text-muted small mb-0">無</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-bicycle"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">單車入房</h6>
+                                                    <p class="text-muted small mb-0">有</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-wifi"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">WIFI</h6>
+                                                    <p class="text-muted small mb-0">有</p>
+                                                </div>
+                                            </div>
+                                            <!-- 更多項目可再複製 col-4 col-md-2 -->
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <div class="fancy-title">基本資料</div>
+                                        <div class="row g-3 sPicCard">
+                                            <!-- 單一卡片 start -->
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fas fa-clock"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">入住時間</h6>
+                                                    <p class="text-muted small mb-0">15:00 後</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fas fa-sign-out-alt"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">退房時間</h6>
+                                                    <p class="text-muted small mb-0">12:00 前</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-stopwatch"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">彈性保留</h6>
+                                                    <p class="text-muted small mb-0">17:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-money-bills"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">外幣兌換</h6>
+                                                    <p class="text-muted small mb-0">無</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-regular fa-credit-card"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">刷卡服務</h6>
+                                                    <p class="text-muted small mb-0">有</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-paw"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">寵物共宿</h6>
+                                                    <p class="text-muted small mb-0">無</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-bicycle"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">單車入房</h6>
+                                                    <p class="text-muted small mb-0">有</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <div class="card green text-center h-100 shadow-sm rounded-3">
+                                                    <div class="icon-circle mx-auto mb-2">
+                                                        <i class="fa-solid fa-wifi"></i>
+                                                    </div>
+                                                    <h6 class="mb-1">WIFI</h6>
+                                                    <p class="text-muted small mb-0">有</p>
+                                                </div>
+                                            </div>
+                                            <!-- 更多項目可再複製 col-4 col-md-2 -->
+                                            <div class="col-md-12 mt-3">
+                                                <div class="policy-wrapper">
+                                                    <div class="policy-box collapsed">
+                                                        <div class="fancy-title">其他事項</div>
+                                                        <ul class="policy-list">
+                                                            <li>行政俱樂部開放時間：06:30-22:00（限行政樓層房客使用）</li>
+                                                            <li>行政俱樂部早餐：06:30-10:00（週六06:30-10:30）</li>
+                                                            <li>雞尾酒會：17:00-19:00</li>
+                                                            <li>訂金為房價之 50%</li>
+                                                            <li>謝絕訪客，無加床服務，加人酌收 1,000 元清潔費。</li>
+                                                            <li>請務必依照民宿人數入住，若自行增加人數，民宿有權加倍收費。</li>
+                                                            <li>假日定義：週六；平日定義：週日至週五。</li>
+                                                            <li>旺季：6 月～9 月、農曆新年及連續假日；淡季：10 月～5 月。</li>
+                                                            <li>貴重物品請隨身攜帶妥善保管，如有遺失恕不負責。</li>
+                                                            <li>為維護住宿安全，本民宿範圍內室內外皆禁菸、禁帶寵物、禁烤肉。</li>
+                                                            <li>如私自攜帶寵物入住，恕不退費並強制退房。</li>
+                                                            <li>嚴禁酗酒轟趴、嗑藥及違法行為，發現將立即報警處理。</li>
+                                                        </ul>
+                                                        <div class="gradient-mask"></div>
+                                                    </div>
+                                                    <button class="toggle-btn">＋ 展開</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- 卡片結束，請複製 -->
-                                        <div class="col-6 col-md-3">
-                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fas fa-sign-out-alt"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">退房時間</h6>
-                                                <p class="text-muted small mb-0">12:00 前</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-3">
-                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fa-solid fa-stopwatch"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">彈性保留</h6>
-                                                <p class="text-muted small mb-0">17:00</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-3">
-                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fa-solid fa-money-bills"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">外幣兌換</h6>
-                                                <p class="text-muted small mb-0">無</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-3">
-                                            <div class="card green text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fa-regular fa-credit-card"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">刷卡服務</h6>
-                                                <p class="text-muted small mb-0">有</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-3">
-                                            <div class="card text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fa-solid fa-paw"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">寵物共宿</h6>
-                                                <p class="text-muted small mb-0">無</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-3">
-                                            <div class="card green text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fa-solid fa-bicycle"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">單車入房</h6>
-                                                <p class="text-muted small mb-0">有</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-3">
-                                            <div class="card green text-center h-100 shadow-sm rounded-3 p-3">
-                                                <div class="icon-circle mx-auto mb-2">
-                                                    <i class="fa-solid fa-wifi"></i>
-                                                </div>
-                                                <h6 class="fw-bold mb-1">WIFI</h6>
-                                                <p class="text-muted small mb-0">有</p>
-                                            </div>
-                                        </div>
-                                        <!-- 更多項目可再複製 col-6 col-md-3 -->
-                                    </div>
+                                    </section>
                                 </div>
-
                                 <!-- 右側 3 欄：價格與圖片 -->
                                 <div class="col-md-2 text-center">
-                                    <h5 class="text-muted">每晚</h5>
-                                    <h2 class="text-primary fw-bold mb-3">NT$ 10,000</h2>
+                                    <div class="priceBox">
+                                        <h5>今日價格</h5>
+                                        <h2 class="text-price fw-bold mb-3">NT$ 10,000</h2>
+                                    </div>
                                     <div class="fancy-title">房內設備</div>
                                     <div class="list-stuff">
                                         <ul>
@@ -194,26 +300,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12 mt-3">
-                                    <div class="fancy-title">其他事項</div>
-                                    <ul class="policy-list">
-                                        <li>行政俱樂部開放時間：06:30-22:00（限行政樓層房客使用）</li>
-                                        <li>行政俱樂部早餐：06:30-10:00（週六06:30-10:30）</li>
-                                        <li>雞尾酒會：17:00-19:00</li>
-                                        <li>訂金為房價之 50%</li>
-                                        <li>謝絕訪客，無加床服務，加人酌收 1,000 元清潔費。</li>
-                                        <li>請務必依照民宿人數入住，若自行增加人數，民宿有權加倍收費。</li>
-                                        <li>假日定義：週六；平日定義：週日至週五。</li>
-                                        <li>旺季：6 月～9 月、農曆新年及連續假日；淡季：10 月～5 月。</li>
-                                        <li>貴重物品請隨身攜帶妥善保管，如有遺失恕不負責。</li>
-                                        <li>為維護住宿安全，本民宿範圍內室內外皆禁菸、禁帶寵物、禁烤肉。</li>
-                                        <li>如私自攜帶寵物入住，恕不退費並強制退房。</li>
-                                        <li>嚴禁酗酒轟趴、嗑藥及違法行為，發現將立即報警處理。</li>
-                                    </ul>
-
-                                </div>
-                            </div>
                         </div>
 
                     </div>
@@ -231,18 +317,5 @@
 <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
 <script src="js/swiper.js"></script>
 <script src="js/modules/bookingBarComponent.js" defer></script>
-<script>
-
-    flatpickr("#checkIn", {
-        dateFormat: "Y/m/d",
-        minDate: "today"
-    });
-
-    flatpickr("#checkOut", {
-        dateFormat: "Y/m/d",
-        minDate: "today"
-    });
-
-</script>
 
 </html>

@@ -8,13 +8,13 @@ window.loadBanner = function () {
         <!-- 左側圖片區 -->
         <div class="vertical-scroll-wrapper">
           <div class="vertical-scroll-inner">
-            <img src="images/news/news01.jpg" alt="圖1" />
-            <img src="images/news/news06.jpg" alt="圖2" />
-            <img src="images/news/news02.jpg" alt="圖3" />
+            <img src="images/news/news-happykid.jpg" alt="圖1" />
+            <img src="images/news/news-flower.jpg" alt="圖2" />
+            <img src="images/news/news-balloon.jpg" alt="圖3" />
             <!-- 為了 loop 加重複圖片 -->
-             <img src="images/news/news03.jpg" alt="圖1" />
-            <img src="images/news/news04.jpg" alt="圖2" />
-            <img src="images/news/news01.jpg" alt="圖3" />
+             <img src="images/facility/pool03.jpg" alt="圖1" />
+            <img src="images/food-s-pic/sfd-10.jpg" alt="圖2" />
+            <img src="images/news/news-welcome.jpg" alt="圖3" />
           </div>
         </div>
 

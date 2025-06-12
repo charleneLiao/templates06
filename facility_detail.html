@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTO HOTEL</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 主樣式 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 外掛樣式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'>
+
+
+
+    <!-- 外掛 JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+
+    <!-- 自訂功能 -->
+    <script src="js/include.js" defer></script>
+    <script src="js/tools/goTop.js" defer></script>
+    <script src="js/tools/toggle.js" defer></script>
+    <script src="js/modules/headerComponent.js" defer></script>
+    <script src="js/modules/footerComponent.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof loadHeader === "function") loadHeader();
+            if (typeof loadFooter === "function") loadFooter();
+            if (typeof loadBookingBar === "function") loadBookingBar();
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="headerComponent"></div>
+
+    <main>
+        <div id="facility">
+            <div class="container mt-3">
+                <div class="hd title text-center mb-4">
+                    <h1>Hotel Facilities</h1>
+                    <p>飯店設施一覽</p>
+                    <h2>海景恆溫泳池</h2>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="in">
+                    <div id="detail" class="clearfix">
+                        <section class="section slider-section">
+                            <div class="container-fluid slider-column">
+                                <div class="swiper swiper-slider">
+                                    <div class="swiper-wrapper">
+                                        <img class="swiper-slide" src="images/facility/pool01.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/facility/pool02.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/facility/pool03.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/facility/pool01.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/facility/pool02.jpg" alt="Swiper">
+                                        <img class="swiper-slide" src="images/facility/pool03.jpg" alt="Swiper">
+                                    </div>
+                                    <span class="swiper-pagination"></span>
+                                    <span class="swiper-button-prev"></span>
+                                    <span class="swiper-button-next"></span>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- 下方內容 -->
+                        <div class="container py-5">
+                            <section class="container my-5" id="facility-info">
+                                <h2 class="text-center fw-bold mb-4 position-relative info-title">INFORMATION</h2>
+
+                                <!-- 簡介段落 -->
+                                <p class="text-center text-muted fs-5 mb-5">
+                                    坐擁遼闊海景的恆溫泳池，讓您在四季皆宜的舒適水溫中自在暢泳。搭配陽光與海風，享受專屬於渡假的寧靜與悠閒，無論白天或夜晚，皆能沉浸於如夢似幻的水色美景中。
+                                </p>
+
+                                <!-- 資訊表格 -->
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-info-custom w-100">
+                                        <tbody>
+                                            <tr>
+                                                <th class="bg-light text-center w-25">營業時間</th>
+                                                <td class="text-start">10:00～18:30</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="bg-light text-center">電話</th>
+                                                <td class="text-start">(07)555-5678</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <div id="footerComponent"></div>
+</body>
+<script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
+<script src="js/swiper.js"></script>
+<script src="js/modules/bookingBarComponent.js" defer></script>
+
+</html>
