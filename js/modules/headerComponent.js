@@ -35,7 +35,7 @@ window.loadHeader = function () {
       <div class="action-buttons d-flex gap-2">
         <a href="booking.html" class="btn btn-bookroom">客房預訂</a>
         <button class="btn btn-restaurant">餐廳預訂</button>
-        <button class="btn btn-member">加入會員</button>
+        <button class="btn btn-member" id="openMemberModalBtn">加入會員</button>
       </div>
       <div class="menu-icon text-center" id="menuToggle">
         <div class="icon-lines"><div></div><div></div></div>
@@ -61,13 +61,15 @@ window.loadHeader = function () {
 
   const data = {
     items: [
-      { title: "最新消息", href: "news.html", 
+      {
+        title: "最新消息", href: "news.html",
         children: [
           { title: "住宿優惠", href: "news.html?category=住宿優惠" },
           { title: "餐飲優惠", href: "news.html?category=餐飲優惠" },
           { title: "活動訊息", href: "news.html?category=活動訊息" },
           { title: "藝文活動", href: "news.html?category=藝文活動" }
-        ] },
+        ]
+      },
       {
         title: "房型介紹",
         href: "rooms.html",
@@ -192,6 +194,36 @@ window.loadHeader = function () {
       overlay.classList.remove("show");
     }
   });
+
+// 加入會員按鈕（桌機）
+const desktopBtn = document.getElementById("openMemberModalBtn");
+if (desktopBtn) {
+  desktopBtn.addEventListener("click", function () {
+    if (typeof window.loadLoginModal === "function") {
+      window.loadLoginModal();
+    }
+  });
+}
+
+// ✅ 插入手機按鈕
+const mobileBtns = document.createElement("div");
+mobileBtns.className = "mobile-bottom-buttons d-md-none";
+mobileBtns.innerHTML = `
+  <a href="booking.html" class="btn btn-bookroom flex-fill">客房預訂</a>
+  <button class="btn btn-member flex-fill" id="openMemberModalBtnMobile">加入會員</button>
+`;
+document.body.appendChild(mobileBtns);
+
+// ✅ 等 append 完再抓
+const mobileBtn = mobileBtns.querySelector("#openMemberModalBtnMobile");
+if (mobileBtn) {
+  mobileBtn.addEventListener("click", function () {
+    if (typeof window.loadLoginModal === "function") {
+      window.loadLoginModal();
+    }
+  });
+}
+
 };
 
 

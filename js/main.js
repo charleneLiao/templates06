@@ -78,7 +78,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  loadHeader();
+    loadHeader();
+    const btn = document.getElementById("openMemberModalBtn");
+    if (btn) {
+        btn.addEventListener("click", function () {
+            if (typeof loadLoginModal === "function") loadLoginModal();
+        });
+    }
 });
 
 

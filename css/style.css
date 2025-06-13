@@ -968,6 +968,38 @@ main .hd.title h2 {
   }
 }
 
+.mobile-bottom-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ccc;
+}
+.mobile-bottom-buttons .btn {
+  margin: 0 0.25rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  flex: 1;
+}
+.mobile-bottom-buttons .btn-bookroom {
+  background-color: #144747;
+  color: #ffffff;
+}
+.mobile-bottom-buttons .btn-restaurant {
+  background-color: rgba(42, 24, 24, 0.9294117647);
+  color: #ffffff;
+}
+.mobile-bottom-buttons .btn-member {
+  background-color: #142247;
+  color: #ffffff;
+}
+
 .bookingBarComponent {
   background-color: red;
   padding: 1rem 0;
@@ -2097,7 +2129,8 @@ main .hd.title h2 {
   color: #ffffff;
 }
 
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled,
+.form-control[readonly] {
   background-color: #e9e6da;
 }
 
@@ -2109,7 +2142,9 @@ main .hd.title h2 {
 
 .flatpickr-months .flatpickr-month,
 .flatpickr-current-month .flatpickr-monthDropdown-months,
-span.flatpickr-weekday, .flatpickr-weekdays, .flatpickr-day.selected {
+span.flatpickr-weekday,
+.flatpickr-weekdays,
+.flatpickr-day.selected {
   background-color: #a38300 !important;
 }
 
@@ -2128,6 +2163,37 @@ span.flatpickr-weekday, .flatpickr-weekdays, .flatpickr-day.selected {
 
 .specialOffersComponent .container .promo-slider .slick-dots li.slick-active button {
   background-color: #e9c228;
+}
+
+.loginForm input,
+.loginForm select {
+  font-size: 1em;
+}
+.loginForm h5 {
+  border-bottom: 1px solid #a38300;
+  padding: 6px;
+  width: 100%;
+}
+.loginForm .tab-switch {
+  border-radius: 5px 5px 0 0;
+  font-size: 0.9em;
+  font-weight: normal;
+  padding: 0.5em;
+}
+.loginForm .text-primary, .loginForm .text-warning {
+  color: #142247 !important;
+}
+.loginForm .text-danger {
+  color: #142247 !important;
+  background-color: rgba(163, 131, 0, 0.3);
+}
+.loginForm .btn-outline-secondary {
+  background-color: #ffffff;
+  color: #a38300;
+  border: 1px solid #a38300;
+}
+.loginForm .btn-change {
+  background-color: rgba(163, 131, 0, 0.3);
 }
 
 .footerComponent {
