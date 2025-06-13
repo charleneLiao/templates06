@@ -93,4 +93,16 @@
         }
 
     }
+
+    @include respond-max(sm) {
+        .container {
+            .promo-slider {
+                padding: 0;
+                .slick-prev,
+                .slick-next {
+                    display: none !important;
+                }
+            }
+        }
+    }
 }

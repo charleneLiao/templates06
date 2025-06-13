@@ -1,0 +1,182 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './mixins' as *;
+
+.bannerComponent {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    overflow: hidden;
+
+    .hero-bg-wrap {
+        width: 65%; // 或指定寬高
+        height: 100vh; // 建議固定高度，否則看不到效果
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        right: 0;
+
+        .hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // 確保不變形、鋪滿
+            object-position: center; // 顯示中間區域
+            display: block;
+        }
+    }
+
+    .text-center {
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 3rem;
+        letter-spacing: 0.1em;
+        position: absolute;
+        top: 33%;
+        left: 17%;
+        z-index: 10;
+        width: 387px;
+        font-family: system-ui;
+        text-shadow: 0 0 4px white, 0 0 2px white, 0 0 20px white;
+    }
+
+    .text-muted {
+        font-size: 100%;
+        font-family: Georgia, serif;
+        letter-spacing: 0.06em;
+        line-height: 1.86;
+        position: absolute;
+        z-index: 2;
+        bottom: 40%;
+        left: -24%;
+        text-align: left;
+        color: rgb(210, 212, 213);
+        margin-left: 47%;
+
+        @include respond-max(lg) {
+            margin-left: 53%;
+        }
+    }
+
+
+    // 🎯 垂直輪播設定（由上往下）
+    .vertical-scroll-wrapper {
+        width: 20%;
+        height: 100vh;
+        overflow: hidden;
+
+        .vertical-scroll-inner {
+            display: flex;
+            flex-direction: column;
+            animation: none;
+            opacity: 0;
+            transform: translateY(-50%); // ✅ 初始在中間（準備向下滾）
+            transition: opacity 0.5s ease;
+        }
+
+        &.start .vertical-scroll-inner {
+            animation: scroll-down 20s linear infinite;
+            opacity: 1;
+        }
+
+        @include respond-max(md) {
+            width: 100%;
+            height: auto;
+            z-index: 5;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            .vertical-scroll-inner {
+                flex-direction: row;
+                width: max-content; // ✅ 內容寬度自動撐開
+                transform: none; // ✅ 千萬不要有 translateX(-50%)
+                // transform: translateX(-50%); // 改為水平位移
+            }
+
+            &.start .vertical-scroll-inner {
+                animation: scroll-right 20s linear infinite;
+            }
+
+            .vertical-scroll-inner img {
+                width: initial;
+                height: 163px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vertical-scroll-wrapper {
+                overflow: hidden;
+                width: 100vw;
+
+                &.start .vertical-scroll-inner {
+                    animation: scrollX 30s linear infinite;
+                }
+            }
+
+            .vertical-scroll-inner {
+                display: flex;
+                flex-wrap: nowrap;
+
+                img {
+                    width: 100vw;
+                    flex-shrink: 0;
+                    object-fit: cover;
+                }
+            }
+
+            @keyframes scrollX {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(var(--scroll-distance));
+                }
+            }
+        }
+
+
+
+
+        @keyframes scroll-down {
+            0% {
+                transform: translateY(-50%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+    }
+
+    // 🚨 這裡要調整為「往下滾」
+    @keyframes scroll-down {
+        0% {
+            transform: translateY(-50%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    .vertical-scroll-inner img {
+        height: 220px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        flex-shrink: 0;
+    }
+}

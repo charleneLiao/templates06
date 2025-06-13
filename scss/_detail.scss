@@ -33,7 +33,8 @@
     }
 }
 
-#rooms, #facility {
+#rooms,
+#facility {
     .container-fluid {
         padding: 0;
     }
@@ -44,9 +45,11 @@
             color: #b8b8b8;
             font-weight: normal;
         }
-        h5{
-            color: #b8b8b8 ;
+
+        h5 {
+            color: #b8b8b8;
         }
+
         .text-price,
         .text-muted {
             font-size: 1.1em;
@@ -76,17 +79,47 @@
             padding: 0.7em;
 
             &.green {
-                background-color: rgba($success, 0.1);
-                border: 1px solid rgba($success, 0.2);
+                background-color: rgba(#7050b91a, 0.1);
+                border: 1px solid rgba(#7050b91a, 0.2);
 
                 .icon-circle {
                     background-color: $white;
-                    color: $success;
+                    color: #926eb5;
                 }
 
                 .text-muted,
                 h6 {
-                    color: $success !important;
+                    color: #926eb5 !important;
+                }
+            }
+
+            &.blue {
+                background-color: rgba(#d372a11a, 0.1);
+                border: 1px solid rgba(#d372a11a, 0.2);
+
+                .icon-circle {
+                    background-color: $white;
+                    color: #ce458793;
+                }
+
+                .text-muted,
+                h6 {
+                    color: #ce458793 !important;
+                }
+            }
+
+            &.orange {
+                background-color: rgba(#ff9e071a, 0.1);
+                border: 1px solid rgba(#ff9e071a, 0.2);
+
+                .icon-circle {
+                    background-color: $white;
+                    color: #ffa007d3;
+                }
+
+                .text-muted,
+                h6 {
+                    color: #ffa007d3 !important;
                 }
             }
         }
@@ -190,6 +223,22 @@
         }
     }
 
+    #cardContainer {
+        width: 100%;
+        display: flex;
+        /* ✅ 關鍵改這裡 */
+        flex-wrap: wrap;
+        /* ✅ 卡片換行時不會溢出 */
+        box-sizing: border-box;
+        gap: 1rem;
+
+        @include respond-max(sm) {
+            .col-4 {
+                width: 30.8%;
+            }
+        }
+    }
+
     .list-stuff {
         ul {
             text-align: left;
@@ -274,9 +323,10 @@
     }
 
     @include respond-max(sm) {
-        .priceBox{
+        .priceBox {
             margin-top: 1em;
         }
+
         .sPicCard {
             .col-md-2 {
                 width: 25%;
@@ -296,6 +346,42 @@
         .bookingBarComponent {
             .p-3 {
                 padding: 0.5em !important;
+            }
+        }
+    }
+}
+
+#rooms {
+    .policy-box {
+        .policy-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+
+            li {
+                width: 50%; // 桌面：兩欄
+                padding: 0 1em;
+
+                &::before {
+                    content: "";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900; // solid icon 用 900，regular 用 400
+                    content: "\f061"; // ← 這就是 fa-user-tie 的 Unicode
+                    margin-right: 0.5rem;
+                    color: rgba( $primary, 0.5);
+                }
+            }
+        }
+
+        @include respond-max(sm) {
+
+            // 手機以下螢幕
+            .policy-list {
+                li {
+                    width: 100%; // 手機：一欄
+                }
             }
         }
     }

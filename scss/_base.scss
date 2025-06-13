@@ -21,7 +21,7 @@ a {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
   &:hover {
-    background: #0d6efd;
+    background: rgba($primary, 0.6);
   }
 
   &.show {
@@ -31,7 +31,7 @@ a {
 }
 
 .hd-title {
-  padding: 1em 0;
+  padding: 0.5em 0 0.8em 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -116,9 +116,9 @@ a {
     }
   }
 }
-#specialOffersComponent{
-  padding-top: 1em;
-}
-section{
+
+#specialOffersComponent {}
+
+section {
   padding: 2em 0;
 }

@@ -195,9 +195,6 @@
 .container .row {
   flex: 0 0 calc(50% - 12px);
   gap: 0;
-  @include respond-max(sm){
-    padding: 0.5em;
-  }
 }
 
 @include respond-max(md) {
@@ -209,6 +206,11 @@
   .container .row {
     flex: 0 0 calc(50% - 12px);
     gap: 0;
+  }
+  .container{
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
   }
 }
 

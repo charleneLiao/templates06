@@ -53,10 +53,10 @@ window.loadFooter = function () {
           <li>訂房專線：${data.phone}</li>
           <li>傳真號碼：${data.fax}</li>
         </ul>
-        <div class="d-flex justify-content-md-start justify-content-center gap-3">
+        <div class="d-flex justify-content-md-start justify-content-center gap-3 socialBox">
           ${data.social.map(item => `
           <a target="_blank" href="${item.href}" class="text-dark fs-5" aria-label="${item.name}">
-            <i class="fa ${item.icon}"></i>
+            <i class="fa-brands ${item.icon}"></i>
           </a>
           `).join('')}
         </div>

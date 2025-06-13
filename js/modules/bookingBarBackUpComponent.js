@@ -11,19 +11,19 @@ window.loadBookingBar = function () {
  <p class="hd"><i class="icon-bag"></i>客房預訂</p>
 
       <!-- 入住 -->
-      <div class="col-md-2 p-3 border-end">
+      <div class="col-md-2 border-end">
         <label for="checkIn" class="form-label text-muted mb-1">入住</label>
         <input type="text" id="checkIn" class="form-control text-center fw-bold fs-5" placeholder="選擇日期" autocomplete="off" />
       </div>
 
       <!-- 退房 -->
-      <div class="col-md-2 p-3 border-end">
+      <div class="col-md-2 border-end">
         <label for="checkOut" class="form-label text-muted mb-1">退房</label>
         <input type="text" id="checkOut" class="form-control text-center fw-bold fs-5" placeholder="選擇日期" autocomplete="off" />
       </div>
 
       <!-- 成人 -->
-      <div class="col-md-2 p-3 border-end">
+      <div class="col-md-2 border-end">
         <div class="text-muted mb-1">成人</div>
         <div class="d-flex justify-content-center align-items-center gap-3 fs-4">
           <button type="button" class="btn btn-link p-0" onclick="adjust('adult', -1)">－</button>
@@ -33,7 +33,7 @@ window.loadBookingBar = function () {
       </div>
 
       <!-- 兒童 -->
-      <div class="col-md-2 p-3 border-end">
+      <div class="col-md-2 border-end">
         <div class="text-muted mb-1">兒童</div>
         <div class="d-flex justify-content-center align-items-center gap-3 fs-4">
           <button type="button" class="btn rounded-circle btn-outline-dark" onclick="adjust('child', -1)">－</button>

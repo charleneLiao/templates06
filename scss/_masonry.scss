@@ -1,3 +1,8 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+@use './animations';
+@use './mixins' as *;
+
 .masonry {
     columns: 250px;
     column-gap: 20px;
@@ -79,16 +84,17 @@
     position: relative;
     overflow: visible;
     margin-bottom: 6em;
+
     .external-slider-caption {
         position: absolute;
-        bottom: -20px;
+        bottom: -100px;
         left: 50%;
         transform: translateX(-50%) translateY(10px);
         background: rgba(255, 255, 255, 0.95);
         padding: 1.5em 2em;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         z-index: 20;
-        max-width: 90%;
+        max-width: 98%;
         text-align: center;
         opacity: 0;
         transition: opacity 0.5s ease, transform 0.5s ease;
@@ -168,6 +174,25 @@
                     stroke: #fff;
                 }
             }
+        }
+    }
+
+    @include respond-max(md) {
+       .external-slider-caption {
+            width: 500px;
+            bottom: -46px;
+            left: 50%;
+        }
+    }
+
+    @include respond-max(sm) {
+        .external-slider-caption {
+            width: 346px;
+            bottom: -70px;
+            left: 50%;
+        }
+        .room-slider .owl-nav button{
+            display: none;
         }
     }
 }

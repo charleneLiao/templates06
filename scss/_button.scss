@@ -115,3 +115,28 @@
         filter: brightness(1.05);
     }
 }
+
+.btn-anim {
+    @include auto-button($primary);
+    position: relative;
+    padding: 0.5em 2.5em;
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+    font-size: 1em;
+
+    &:hover {
+        color: $white !important;
+
+        i {
+            color: rgba($primary, 1);
+        }
+    }
+
+    i {
+        position: absolute;
+        right: -15px;
+        color: rgba($primary, 0.3);
+        top: 30%;
+    }
+}

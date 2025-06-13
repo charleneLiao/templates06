@@ -58,4 +58,12 @@
     line-height: 1;
     text-align: center;
   }
+  .inoutbox{
+      padding: 0.5em;
+    }
+  @include respond-max(sm){
+    .inoutbox{
+      padding: 0.5em;
+    }
+  }
 }

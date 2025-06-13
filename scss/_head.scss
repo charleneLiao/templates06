@@ -50,9 +50,11 @@
   }
 
   .menu-icon {
-    width: 60px;
+    width: 30px;
     cursor: pointer;
     text-align: center;
+    font-size: 0.9em;
+    white-space: nowrap;
 
     .icon-lines {
       div {
@@ -64,11 +66,11 @@
     }
 
     &.open .icon-lines div:first-child {
-      transform: rotate(45deg) translate(4px, 4px);
+      transform: rotate(33deg) translate(0px, 0px);
     }
 
     &.open .icon-lines div:last-child {
-      transform: rotate(-45deg) translate(4px, -4px);
+      transform: rotate(-35deg) translate(4px, -4px);
     }
   }
 
@@ -118,9 +120,9 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 280px;
+  width: 200px;
   background-color: #f5f1eb;
-  z-index: 11;
+  z-index: 22;
   overflow-y: auto;
   padding: 4rem 0rem 2rem 0rem;
 
@@ -170,8 +172,8 @@
 .submenu-overlay {
   position: fixed;
   top: 0;
-  left: 280px;
-  width: calc(100% - 280px);
+  left: 200px;
+  width: calc(100% - 200px);
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 998;
@@ -392,8 +394,10 @@ main {
 
         h2 {
           font-size: 2.4em;
-          top: 53%;
-          right: 7%;
+          top: 104%;
+          right: 4%;
+          width: 100%;
+          text-align: right;
         }
       }
     }
