@@ -146,9 +146,13 @@
   }
 
   @include respond-max(sm) {
-    .text-muted {
-      bottom: 33%;
+    h1 {
+      left: -7%;
     }
 
+    .text-muted {
+      bottom: 33%;
+      left: -45%;
+    }
   }
 }

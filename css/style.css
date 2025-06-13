@@ -1236,8 +1236,12 @@ main .hd.title h2 {
   flex-shrink: 0;
 }
 @media (max-width: 576px) {
+  .bannerComponent h1 {
+    left: -7%;
+  }
   .bannerComponent .text-muted {
     bottom: 33%;
+    left: -45%;
   }
 }
 
