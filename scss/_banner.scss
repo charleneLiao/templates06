@@ -89,15 +89,16 @@
 
       .vertical-scroll-inner {
         flex-direction: row;
-         width: max-content;           // ✅ 內容寬度自動撐開
-      transform: none;              // ✅ 千萬不要有 translateX(-50%)
+        width: max-content; // ✅ 內容寬度自動撐開
+        transform: none; // ✅ 千萬不要有 translateX(-50%)
         // transform: translateX(-50%); // 改為水平位移
       }
 
       &.start .vertical-scroll-inner {
         animation: scroll-left 20s linear infinite;
       }
-      .vertical-scroll-inner img{
+
+      .vertical-scroll-inner img {
         width: initial;
         height: 163px;
       }
@@ -142,5 +143,12 @@
     object-position: center;
     width: 100%;
     flex-shrink: 0;
+  }
+
+  @include respond-max(sm) {
+    .text-muted {
+      bottom: 33%;
+    }
+
   }
 }

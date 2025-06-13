@@ -1235,6 +1235,11 @@ main .hd.title h2 {
   width: 100%;
   flex-shrink: 0;
 }
+@media (max-width: 576px) {
+  .bannerComponent .text-muted {
+    bottom: 33%;
+  }
+}
 
 .popularRoomsComponent h2 {
   font-family: "Noto Serif TC", serif;
