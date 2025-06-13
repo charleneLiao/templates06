@@ -24,7 +24,7 @@ window.loadPopularRooms = function () {
     </div>
 
     <!-- 高級樓層與一般樓層 -->
-    <div class="row row-cols-1 row-cols-md-1 g-4">
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4">
       <div class="col">
         <div class="position-relative bg-white shadow-sm rounded overflow-hidden h-100">
           <img src="images/room/room04.jpg" class="img-fluid w-100 object-fit-cover" alt="高級樓層">

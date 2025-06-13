@@ -114,6 +114,10 @@
     &:hover {
         filter: brightness(1.05);
     }
+
+    @include respond-max(md) {
+        padding: 0;
+    }
 }
 
 .btn-anim {

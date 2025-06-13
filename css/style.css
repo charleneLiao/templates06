@@ -223,6 +223,10 @@ a {
   color: #111111;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 #scrollToTopBtn {
   border: none;
   position: fixed;
@@ -568,6 +572,11 @@ section {
 }
 .glow-btn:hover {
   filter: brightness(1.05);
+}
+@media (max-width: 768px) {
+  .glow-btn {
+    padding: 0;
+  }
 }
 
 .btn-anim {
@@ -1627,10 +1636,6 @@ main .hd.title h2 {
   padding-left: 0;
 }
 
-#rooms .container-fluid,
-#facility .container-fluid {
-  padding: 0;
-}
 #rooms #detail h6,
 #facility #detail h6 {
   font-size: 1em;

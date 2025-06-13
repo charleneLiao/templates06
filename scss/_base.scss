@@ -3,7 +3,9 @@
 a {
   color: $text-color;
 }
-
+.container-fluid {
+        padding: 0;
+    }
 #scrollToTopBtn {
   border: none;
   position: fixed;
