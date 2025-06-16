@@ -1538,7 +1538,7 @@ main .hd.title h2 {
 }
 .room-slider-wrapper .external-slider-caption {
   position: absolute;
-  bottom: -100px;
+  bottom: -45px;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   background: rgba(255, 255, 255, 0.95);
